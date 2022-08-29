@@ -1,0 +1,386 @@
+:root {
+    --1: #162552;
+    --2: #123386;
+    --3: #edeeee;
+    --4: #828696;
+    --5: #a6a2a4;
+    --6: #b6bac1;
+    --7: #4a6491;
+    --8: #7a746c;
+    --9: #c0b5ab;
+}
+
+@font-face {
+    font-family: "Myriad";
+    src: url("../assets/fonts/myriad.otf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Myriad';
+}
+
+
+body {
+    font-size: 1rem;
+    background: var(--3);
+    color: var(--1);
+    text-decoration: none;
+    /*width: 95vw;*/
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 200px 0.5fr 3fr 0.5fr 100px;
+
+    grid-template-areas:
+        "header header header"
+        "ads ads ads"
+        "main main main"
+        "main main main"
+        "footer footer footer";
+
+    column-gap: 8px;
+    row-gap: 8px;
+
+}
+
+header {
+    grid-area: header;
+    /*border: 2px solid green;*/
+    background: var(--1);
+    border-bottom: 5px solid var(--1);
+    display: flex;
+    flex-wrap: nowrap;
+    align-self: top;
+    justify-content: space-between;
+
+}
+
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.publicidad {
+    margin: 30px;
+    padding: 10px;
+    background: var(--7);
+    border-radius: 15px;
+    color: var(--6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    font-size: 1rem;
+}
+
+.ads {
+    grid-area: ads;
+}
+
+.adsDos {
+    display: none;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 2px;
+    color: var(--3);
+}
+
+header section {
+    /*border: 1px solid blue;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 8px;
+}
+
+.social {
+    /*display: flex;
+    align-items: center;*/ /* Heredados de header section */
+    justify-content: space-around;
+    min-width: 20px;
+    padding: 8px;
+
+}
+
+.social__container {            /*Dimensionamos y posicionamos los círculos que contendrán los logos */
+   height: 20%;
+   aspect-ratio: 1;
+   background-image: radial-gradient(circle at center, var(--1), 80%, var(--3));
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+
+.social__container a img {
+    width: 20px;
+    object-fit: scale-down;
+}
+
+.paginas {
+    padding: 4px;
+}
+.paginas__links {
+    background: var(--3);
+    border-radius: 15px;
+    margin: 4px;
+    min-width: 100px;
+    min-height: 30px;
+    text-align: center;
+    /*
+    display: flex;
+    justify-content: space-around;
+    */
+}
+
+a {
+    text-decoration: none;
+}
+
+
+main div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--5);
+    border-radius: 30px;
+    margin: 30px;
+    padding: 30px;
+    width: 70%;
+}
+
+
+
+.calendario iframe {
+    width: 75%;
+    aspect-ratio: 2;
+    margin: 20px;
+}
+
+footer {
+    /*position: sticky;
+    bottom: 0;*/
+    grid-area: footer;
+    background: var(--1);
+    color: var(--3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+footer a {
+    color: #eee;
+}
+
+
+/***************  Contacto ***************/
+form {
+    border: 3px solid var(--6);
+    border-radius: 20px;
+    width: 60%;
+    margin: 64px auto;
+    text-align: center;
+    padding: 10px;
+}
+
+form label {
+    display: block;
+}
+
+form textarea {
+    width: 80%;
+}
+
+/***************  Conductores ***************/
+.conductores {
+    border: 5px solid var(--1);
+    width: 90%;
+    display: block;
+    margin: 100px auto;
+}
+
+.conductores__individual {
+    margin: 8px;
+    border: 2px solid var(--7);
+    display: inline-block;
+    text-align: center;
+}
+
+.conductores__individual img {
+    width: 360px;
+    aspect-ratio: 16/9;
+    object-fit: scale-down;
+}
+
+/***************  Radio Online ***************/
+
+.reproductor {
+    border: 2px solid var(--9);
+    border-radius: 20px;
+    padding: 8px;
+}
+
+.reproductor div {
+    width: 80%;
+    margin: 8px auto;
+    padding: 10px;
+}
+
+.reproductor__online {
+    border: 3px solid var(--2);
+    border-radius: 20px;
+}
+
+.reproductor__spotify {
+    border: 3px solid #689E23;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.reproductor__spotify img {
+    width: 100px;
+}
+
+/***************  Emitidos ***************/
+
+.programa {
+    padding: 4px;
+    border: 5px solid var(--1);
+    border-radius: 20px;
+    width: 80%;
+    margin: 8px;                   /* Para centrar con respecto al body (padre) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.programa__imagen {
+    width: 25%;
+    border: 2px solid var(--8);
+}
+
+.programa__imagen img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: fill;
+}
+
+.programa__contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 70%;
+    height: 100%;
+    border: 2px solid var(--8);
+
+}
+
+.titulo {
+    font-size: 2rem;
+}
+
+
+
+@media only screen and (min-width: 600px) {
+    body {
+        font-size: 1.2rem;
+    }
+
+    .social {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .social__container {            /*Dimensionamos y posicionamos los círculos que contendrán los logos */
+        height: 40%;
+
+        padding: 8px;
+        margin: 4px;
+
+     }
+
+    .social__container a img {
+        width: 36px;
+    }
+}
+
+@media only screen and (min-width: 1023px) {
+    body {
+        font-size: 1.5rem;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr repeat(2, 2fr) 1fr 1fr;
+
+
+        grid-template-areas:
+            "header header header"
+            "null main ads"
+            "null main nulld"
+            "adsDos main nulld"
+            "footer footer footer";
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    header section {
+        /*width: 30%;*/
+        /*border: 1px solid pink;*/
+        flex-direction: row;
+        margin: 8px;
+        padding: 8px;
+    }
+
+    .social {
+        flex-wrap: nowrap;
+    }
+
+    .social__container {            /*Dimensionamos y posicionamos los círculos que contendrán los logos */
+        height: 40%;
+        padding: 12px;
+        margin: 4px;
+        background-image: radial-gradient(circle at center, var(--1), 80%, var(--3));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+
+    .social__container a img {
+        width: 40px;
+    }
+    .paginas {
+        padding: 4px;
+    }
+    .paginas__links {
+        margin: 4px;
+        padding: 12px;
+        /*
+        display: flex;
+        justify-content: space-around;
+        */
+    }
+
+
+    .adsDos {
+        grid-area: adsDos;
+        display: flex;
+    }
+}
+
