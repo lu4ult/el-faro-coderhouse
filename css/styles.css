@@ -21,6 +21,7 @@
     box-sizing: content-box;
     font-family: 'Myriad';
     font-size: calc(0.5rem + 0.8vw);
+    border: 1px solid red;
 }
 
 
@@ -101,13 +102,13 @@ header section {
     /*display: flex;
     align-items: center;*/ /* Heredados de header section */
     justify-content: space-around;
-    min-width: 20px;
-    padding: 8px;
+    /* min-width: 20px;
+    padding: 2px; */
 
 }
 
 .social__container {            /*Dimensionamos y posicionamos los círculos que contendrán los logos */
-   height: 20%;
+   height: 10%;
    aspect-ratio: 1;
    background-image: radial-gradient(circle at center, var(--1), 80%, var(--3));
    border-radius: 50%;
@@ -118,7 +119,7 @@ header section {
 }
 
 .social__container a img {
-    width: 20px;
+    width: 90%;
     object-fit: scale-down;
 }
 
@@ -289,7 +290,7 @@ form textarea {
 }
 
 .titulo {
-    /* font-size: 2rem; */
+     /* font-size: 2rem; */
 }
 
 .logo-fondo {
