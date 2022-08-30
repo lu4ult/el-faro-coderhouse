@@ -20,6 +20,7 @@
     padding: 0;
     box-sizing: content-box;
     font-family: 'Myriad';
+    font-size: calc(0.5rem + 0.8vw);
 }
 
 
@@ -30,7 +31,7 @@ body {
     text-decoration: none;
     /*width: 95vw;*/
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 10fr 1fr;
     grid-template-rows: 200px 0.5fr 3fr 0.5fr 100px;
 
     grid-template-areas:
@@ -54,7 +55,6 @@ header {
     flex-wrap: nowrap;
     align-self: top;
     justify-content: space-between;
-
 }
 
 
@@ -76,7 +76,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    font-size: 1rem;
+    /* font-size: 1rem; */
 }
 
 .ads {
@@ -87,11 +87,6 @@ main {
     display: none;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin: 2px;
-    color: var(--3);
-}
 
 header section {
     /*border: 1px solid blue;*/
@@ -294,16 +289,45 @@ form textarea {
 }
 
 .titulo {
-    font-size: 2rem;
+    /* font-size: 2rem; */
 }
+
+.logo-fondo {
+    animation-name: luz-faro;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+
+h1 {
+    /* font-size: 2.5rem; */
+    margin: 2px;
+    color: var(--3);
+    animation-name: reflejo-faro;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes luz-faro {
+    0% {background-color: rgba(247, 242, 30, 0.1);}
+    50% {background-color: rgba(247, 242, 30, 0.9);}
+    75% {background-color: rgba(247, 242, 30, 0.6);}
+    100% {background-color: rgba(247, 242, 30, 0.3);}
+  }
+
+@keyframes reflejo-faro {
+    0% {color: rgba(255, 255, 255, 1);}
+    50% {color: rgba(247, 242, 30, 0.9);}
+    60% {color: rgba(247, 242, 30, 0.65);}
+    100% {color: rgba(255, 255, 255, 1);}
+  }
 
 
 
 @media only screen and (min-width: 600px) {
-    body {
-        font-size: 1.2rem;
-    }
-
+    
     .social {
         flex-direction: row;
         flex-wrap: wrap;
@@ -323,7 +347,7 @@ form textarea {
 
 @media only screen and (min-width: 1023px) {
     body {
-        font-size: 1.5rem;
+       
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-rows: 1fr repeat(2, 2fr) 1fr 1fr;
 
@@ -336,9 +360,7 @@ form textarea {
             "footer footer footer";
     }
 
-    h1 {
-        font-size: 2rem;
-    }
+    
     header section {
         /*width: 30%;*/
         /*border: 1px solid pink;*/
