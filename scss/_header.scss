@@ -1,0 +1,16 @@
+header {
+    position: relative;
+    left: -10px;
+    top: -10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $azul-transparente;
+    margin: 4px;
+    padding: 4px;
+    max-height: 100px;
+    img {
+        height: 70%;
+    }
+}

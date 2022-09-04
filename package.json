@@ -1,0 +1,21 @@
+{
+  "name": "el-faro-coderhouse",
+  "version": "1.0.0",
+  "description": "Ver online:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	  "build-css":"node-sass --include-path scss scss/styles.css css/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lu4ult/el-faro-coderhouse.git"
+  },
+  "author": "Lautaro Tourn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lu4ult/el-faro-coderhouse/issues"
+  },
+  "homepage": "https://github.com/lu4ult/el-faro-coderhouse#readme"
+}
