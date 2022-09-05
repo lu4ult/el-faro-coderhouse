@@ -21,7 +21,7 @@ with open(".\pages\emisiones\descripciones.json") as json_file:
 
 #generamos el archivo html en función de la lista de episodios
 
-with open(".\pages\emisiones\emisiones-py.html", 'w') as f:
+with open(".\pages\emisiones\emisiones.html", 'w') as f:
     f.write("<!DOCTYPE html><html><head>\n<meta charset=""utf-8""><title>Faros del pasado</title>\n")
 
     f.write("<link rel=\"stylesheet\" href=\"../../css/styles.css\">\n\n<link rel=\"icon\" type=\"image/x-icon\" href=\"../favicon.png\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">")
@@ -67,7 +67,14 @@ with open(".\pages\emisiones\emisiones-py.html", 'w') as f:
         count += 1
 
     f.write("</main>\n")
-    #footer
+    f.write("<div class=\"publicidad\">\n")
+
+    f.write("<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/laarena.png\" alt=\"Publicidad diario La Arena\"></div>\n")
+    f.write("<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/unlpam.jpg\" alt=\"Publicidad Universidad de La Pampa\"></div>\n")
+    f.write("<div class=\"publicidad__item centrado\"><div>Publicite aquí!</div></div>\n")
+    f.write("<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/atuel.jpg\" alt=\"Propaganda Gobierno de La Pampa\"></div>\n")
+    f.write("</div>\n")
+
     f.write("<footer><a href=\"https://lu4ult.github.io\" target=\"__blank\">Desarrollado por Lautaro Tourn</a></footer>")
     #aos
     f.write("<script>AOS.init();</script>")
