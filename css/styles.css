@@ -18,7 +18,7 @@ a {
 body {
   display: grid;
   grid-template-columns: 15% 70% 15%;
-  grid-template-rows: 15vh repeat(3, auto) 5vh;
+  grid-template-rows: 18vh repeat(3, auto) 5vh;
   background: #edeeee;
   grid-template-areas: "header header header" "main main main" "main main main" "publicidad publicidad publicidad" "footer footer footer";
 }
@@ -85,6 +85,12 @@ body header nav ul li:hover {
 body header nav ul li:hover a {
   color: #edeeee;
 }
+body header nav ul li.active {
+  background: #0C1484;
+}
+body header nav ul li.active a {
+  color: #edeeee;
+}
 body main {
   grid-area: main;
   margin: 8px;
@@ -147,7 +153,6 @@ body main section .card {
   width: 90%;
 }
 body main section iframe {
-  border: 2px solid orange;
   width: 100%;
   min-height: 300px;
 }
@@ -226,6 +231,7 @@ body footer a {
 }
 @media only screen and (min-width: 767px) {
   body {
+    grid-template-rows: 10vh repeat(3, auto) 7vh;
     grid-template-areas: "header header header" "nada main publicidad" "nada main publicidad" "nada main nada2" "footer footer footer";
   }
   body header nav ul {

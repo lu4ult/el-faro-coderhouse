@@ -30,7 +30,7 @@ body {
     // height: 100vh;
     display: grid;
     grid-template-columns: 15% 70% 15%;
-    grid-template-rows: 15vh repeat(3, auto) 5vh;
+    grid-template-rows: 18vh repeat(3, auto) 5vh;
     // grid-template-rows: repeat(5, auto);
     //grid-template-rows: 25vw 1fr 1fr 0.2fr 5vh;
 
@@ -125,6 +125,13 @@ body {
                         }
                         animation: bounce 1s;
                     }
+
+                    &.active {
+                        background: $azul-oscuro;
+                        a {
+                            color: $fondo;
+                        }
+                    }
                 }
             }
         }
@@ -205,7 +212,6 @@ body {
             }
 
             iframe {
-                border: 2px solid orange;
                 width: 100%;
                 min-height: 300px;
             }
@@ -315,6 +321,7 @@ body {
 
 @media only screen and (min-width: 767px) {
     body {
+        grid-template-rows: 10vh repeat(3, auto) 7vh;
         grid-template-areas:
         "header header header"
         "nada main publicidad"
