@@ -29,7 +29,7 @@ body .centrado {
 }
 body header {
   grid-area: header;
-  background: #0C1484;
+  background: #0017AC;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -71,9 +71,18 @@ body header nav ul li {
   text-align: center;
   background: #edeeee;
   color: #0017AC;
+  border: 2px solid #edeeee;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 body header nav ul li:hover {
-  background: #7399BF;
+  border: 2px solid white;
+  background: #0017AC;
+  animation: bounce 1s;
+}
+body header nav ul li:hover a {
   color: #edeeee;
 }
 body main {
@@ -152,12 +161,23 @@ body footer a {
   color: white;
 }
 
+@keyframes bounce {
+  25% {
+    transform: translateY(-5px);
+  }
+}
 @media only screen and (min-width: 767px) {
   body {
     grid-template-areas: "header header header" "nada main publicidad" "nada main publicidad" "nada main nada2" "footer footer footer";
   }
   body header nav ul {
     flex-direction: row;
+  }
+  body header nav ul li {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
   body main section {
     width: 100%;
