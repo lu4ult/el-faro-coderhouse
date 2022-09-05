@@ -1,1 +1,4 @@
 /identidad
+*.jpg
+*.jpeg
+/node_modules
