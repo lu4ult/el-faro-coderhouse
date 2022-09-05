@@ -1,14 +1,14 @@
+@font-face {
+  font-family: "Myriad";
+  src: url(../assets/fonts/myriad.otf);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: content-box;
   font-size: calc(1 * (0.5rem + 0.8vw));
+  font-family: "Myriad", cursive;
   color: #0017AC;
-}
-
-img {
-  width: 50px;
-  aspect-ratio: 1;
 }
 
 a {
@@ -100,6 +100,7 @@ body main {
   align-items: center;
   /************ Emisiones *********/
   /********************/
+  /** Conductores **/
 }
 body main .titulo-principal {
   padding: 8px;
@@ -154,22 +155,24 @@ body main section .card {
 }
 body main section iframe {
   width: 100%;
-  min-height: 300px;
+  min-height: 350px;
 }
 body main .episodio {
-  border: 3px solid green;
+  border: 3px solid #689E23;
+  box-shadow: #999 0px 10px 10px 0px;
   display: flex;
   flex-direction: row;
   border-radius: 15px;
   margin: 8px;
   padding: 8px;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
 body main .episodio .episodio_imagen {
   border: 2px solid black;
-  width: 30%;
+  width: 70%;
   aspect-ratio: 1;
 }
 body main .episodio .episodio_imagen img {
@@ -177,7 +180,7 @@ body main .episodio .episodio_imagen img {
   object-fit: cover;
 }
 body main .episodio .episodio_contenido {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   border: 1px solid #7399BF;
@@ -193,13 +196,29 @@ body main .episodio .episodio_contenido .episodio_titulo {
 body main .episodio .episodio_contenido .episodio_descripcion {
   max-height: 300px;
   overflow: auto;
-  font-size: calc(0.5 * (0.5rem + 0.8vw));
+  font-size: calc(0.3 * (0.5rem + 0.8vw));
 }
 body main .episodio .episodio_contenido audio {
   width: 100%;
 }
-body main .reverse {
-  flex-direction: row-reverse;
+body main .carousel-inner {
+  max-width: 480px;
+}
+body main .equipo {
+  border: 2px solid black;
+  display: flex;
+}
+body main .equipo .equipo__miembro {
+  width: 200px;
+  height: 200px;
+  border: 3px solid orange;
+  padding: 12px;
+  margin: 12px;
+}
+body main .equipo .equipo__miembro img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
 }
 body .publicidad {
   grid-area: publicidad;
@@ -211,7 +230,9 @@ body .publicidad .publicidad__item {
   border: 3px solid black;
 }
 body .publicidad .publicidad__item img {
+  max-height: 50px;
   aspect-ratio: auto;
+  object-fit: scale-down;
 }
 body footer {
   grid-area: footer;
@@ -252,15 +273,27 @@ body footer a {
     width: 100%;
   }
   body main section iframe {
-    border: 2px solid orange;
     min-width: 700px;
     aspect-ratio: 16/9;
+  }
+  body main .episodio {
+    flex-direction: row;
+  }
+  body main .episodio .episodio_imagen {
+    width: 30%;
+  }
+  body main .episodio .episodio_contenido {
+    width: 60%;
+  }
+  body main .reverse {
+    flex-direction: row-reverse;
   }
   body .publicidad {
     flex-direction: column;
     justify-content: center;
   }
   body .publicidad .publicidad__item img {
+    max-height: 200px;
     width: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */

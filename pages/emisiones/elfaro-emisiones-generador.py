@@ -30,6 +30,9 @@ with open(".\pages\emisiones\emisiones.html", 'w') as f:
     f.write("<script src=\"https://unpkg.com/aos@2.3.1/dist/aos.js\"></script>")
 
     f.write("</head>\n<body>\n<main>\n")
+
+    #reemplazar por header
+    f.write("<a href=\"../../index.html\">Volver</a>")
     # f.write("<header><a href=\"../elfaro.html\"><img src=\"../elfarologo.jpg\"></a><h2>Faros del pasado</h2></header>\n\n")
     # f.write("<h4>Aqu&iacute; encontrar&aacute;s las grabaciones de los programas emitidos. Usando los controles del reproductor podr&aacute;s adelantar el audio, descargarlo y reproducirlo en 1.5x</h4>")
     # f.write("<a href=\"https://open.spotify.com/show/26ZvU92WzcChhUnhaSxzPw\" target=\"__blank\">\n<div class=\"spotify episodio\"><img src=\"../spotify-logo.png\"></img>")
@@ -70,15 +73,15 @@ with open(".\pages\emisiones\emisiones.html", 'w') as f:
     f.write("<div class=\"publicidad\">\n")
 
     f.write("<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/laarena.png\" alt=\"Publicidad diario La Arena\"></div>\n")
-    f.write("<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/unlpam.jpg\" alt=\"Publicidad Universidad de La Pampa\"></div>\n")
-    f.write("<div class=\"publicidad__item centrado\"><div>Publicite aquí!</div></div>\n")
-    f.write("<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/atuel.jpg\" alt=\"Propaganda Gobierno de La Pampa\"></div>\n")
-    f.write("</div>\n")
+    f.write("\t<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/unlpam.jpg\" alt=\"Publicidad Universidad de La Pampa\"></div>\n")
+    f.write("\t<div class=\"publicidad__item centrado\"><div>Publicite aquí!</div></div>\n")
+    f.write("\t<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/atuel.jpg\" alt=\"Propaganda Gobierno de La Pampa\"></div>\n")
+    f.write("</div>\n\n")
 
-    f.write("<footer><a href=\"https://lu4ult.github.io\" target=\"__blank\">Desarrollado por Lautaro Tourn</a></footer>")
+    f.write("<footer><a href=\"https://lu4ult.github.io\" target=\"__blank\">Desarrollado por Lautaro Tourn</a></footer>\n")
     #aos
     f.write("<script>AOS.init();</script>")
-    f.write("</body>\n</html>")
+    f.write("\n\n</body>\n</html>")
     f.close()
 
 with open(".\pages\emisiones\wa-link.html", 'w') as f:

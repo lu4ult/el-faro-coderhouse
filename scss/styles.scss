@@ -1,6 +1,11 @@
 @import './_variables';
 // @import './_header';
 
+@font-face {
+    font-family: 'Myriad';
+    src: url(../assets/fonts/myriad.otf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,21 +13,16 @@
     // border: 1px solid red;
     // font-size: calc(1rem + 1.2vw);
     font-size: calc(1* $baseSize);
-    // font-family: 'DynaPuff', cursive;
+    font-family: 'Myriad', cursive;
     color: $azul-fuerte;
 }
 
-img {
-    width: 50px;
-    aspect-ratio: 1;
-}
+
+
 
 a {
     text-decoration: none;
 }
-
-
-
 
 
 body {
@@ -69,8 +69,28 @@ body {
         // background: $azul;
 
         .logo-container {
+
             height: 100%;
             background: $azul-suave;
+
+            // #primero {
+            //     position: absolute;
+            //     height: 200px;
+            //     width: 200px;
+            //     top: 40px;
+            //     left: 40px;
+            //     z-index: -1;
+            // }
+
+            // #segundo {
+            //     position: absolute;
+            //     height: 200px;
+            //     width: 200px;
+            //     top: 40px;
+            //     left: 40px;
+            //     z-index: 1;
+            // }
+
             img {
                 height: 100%;
                 width: 100%;                //Navegador Real
@@ -213,14 +233,15 @@ body {
 
             iframe {
                 width: 100%;
-                min-height: 300px;
+                min-height: 350px;
             }
         }
 
 
         /************ Emisiones *********/
         .episodio {
-            border: 3px solid green;
+            border: 3px solid $verde-intermedio;
+            box-shadow: #999 0px 10px 10px 0px;
             display: flex;
             flex-direction: row;
 
@@ -228,12 +249,13 @@ body {
             margin: 8px;
             padding: 8px;
             display: flex;
+            flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
 
             .episodio_imagen {
                 border: 2px solid black;
-                width: 30%;
+                width: 70%;
                 aspect-ratio: 1;
 
                 img {
@@ -243,7 +265,7 @@ body {
             }
 
             .episodio_contenido {
-                width: 50%;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 border: 1px solid $azul-suave;
@@ -260,19 +282,37 @@ body {
                 .episodio_descripcion {
                     max-height: 300px;
                     overflow: auto;
-                    font-size: calc(0.5* $baseSize);
+                    font-size: calc(0.3* $baseSize);
                 }
                 audio {
                     width: 100%;
                 }
             }
         }
+        /********************/
 
-        .reverse {
-            flex-direction: row-reverse;
+        /** Conductores **/
+        .carousel-inner {
+            max-width: 480px;
         }
 
-        /********************/
+        .equipo {
+            border: 2px solid black;
+            display: flex;
+
+            .equipo__miembro {
+                width: 200px;
+                height: 200px;
+                border: 3px solid orange;
+                padding: 12px;
+                margin: 12px;
+                img {
+                    width: 100%;
+                    aspect-ratio: 1;
+                    object-fit: cover;
+                }
+            }
+        }
     }
 
     .publicidad {
@@ -286,8 +326,11 @@ body {
             // padding: 8px;
             border: 3px solid black;
             img {
+                max-height: 50px;
+                // height: 100%;
                 //width: 100%;                //Desktop
                  aspect-ratio: auto;
+                 object-fit: scale-down;
             }
         }
     }
@@ -355,10 +398,25 @@ body {
                 }
 
                 iframe {
-                    border: 2px solid orange;
                     min-width: 700px;
                     aspect-ratio: 16/9;
                 }
+            }
+
+            .episodio {
+                flex-direction: row;
+
+                .episodio_imagen {
+                    width: 30%;
+                }
+
+                .episodio_contenido {
+                    width: 60%;
+                }
+            }
+
+            .reverse {
+                flex-direction: row-reverse;
             }
         }
 
@@ -372,10 +430,10 @@ body {
             .publicidad__item {
 
                 img {
+                    max-height: 200px;
                     width: 100%;
                 }
             }
         }
     }
 }
-
