@@ -92,6 +92,8 @@ body main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /************ Emisiones *********/
+  /********************/
 }
 body main .titulo-principal {
   padding: 8px;
@@ -115,7 +117,7 @@ body main .titulo-principal h2 {
 body main section {
   margin: 8px;
   padding: 8px;
-  margin-top: 20px;
+  margin-top: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,17 +128,73 @@ body main section {
   box-shadow: #999 0px 10px 10px 0px;
 }
 body main section .titulo {
-  color: #295E05;
+  color: #689E23;
   font-size: calc(2.5 * (0.5rem + 0.8vw));
 }
 body main section .link {
   padding: 8px;
   background: #4a6491;
-  border: 5px solid #edeeee;
-  border-radius: 30px solid green;
+  border: 5px solid #4a6491;
+  border-radius: 15px;
 }
 body main section .link a {
-  color: white;
+  color: #edeeee;
+}
+body main section button {
+  color: #edeeee;
+}
+body main section .card {
+  width: 90%;
+}
+body main section iframe {
+  border: 2px solid orange;
+  width: 100%;
+  min-height: 300px;
+}
+body main .episodio {
+  border: 3px solid green;
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  margin: 8px;
+  padding: 8px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body main .episodio .episodio_imagen {
+  border: 2px solid black;
+  width: 30%;
+  aspect-ratio: 1;
+}
+body main .episodio .episodio_imagen img {
+  width: 100%;
+  object-fit: cover;
+}
+body main .episodio .episodio_contenido {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #7399BF;
+  padding: 4px;
+  margin: 4px;
+}
+body main .episodio .episodio_contenido .episodio_titulo {
+  background: #0017AC;
+  color: #edeeee;
+  text-align: center;
+  font-size: calc(1.5 * (0.5rem + 0.8vw));
+}
+body main .episodio .episodio_contenido .episodio_descripcion {
+  max-height: 300px;
+  overflow: auto;
+  font-size: calc(0.5 * (0.5rem + 0.8vw));
+}
+body main .episodio .episodio_contenido audio {
+  width: 100%;
+}
+body main .reverse {
+  flex-direction: row-reverse;
 }
 body .publicidad {
   grid-area: publicidad;
@@ -180,9 +238,17 @@ body footer a {
     border-top-right-radius: 10px;
   }
   body main section {
+    margin: 0.5rem;
+    padding: 0.5rem;
     width: 100%;
-    border: 5px solid #295E05;
-    border-radius: 30px;
+  }
+  body main section .card {
+    width: 100%;
+  }
+  body main section iframe {
+    border: 2px solid orange;
+    min-width: 700px;
+    aspect-ratio: 16/9;
   }
   body .publicidad {
     flex-direction: column;

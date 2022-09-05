@@ -167,7 +167,7 @@ body {
         section {
             margin: 8px;
             padding: 8px;
-            margin-top: 20px;
+            margin-top: 16px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -179,7 +179,7 @@ body {
             box-shadow: #999 0px 10px 10px 0px;
 
             .titulo {
-                color: $verde-fuerte;
+                color: $verde-intermedio;
                 font-size: calc(2.5* $baseSize);
             }
 
@@ -187,14 +187,86 @@ body {
                 padding: 8px;
                 background: $gris-fuerte;
 
-                border: 5px solid $fondo;
-                border-radius: 30px solid green;
+                border: 5px solid $gris-fuerte;
+                border-radius: 15px;
                 // box-shadow: rgba(74, 100, 145, 0.15) 5px 20px 20px 5px;
                 a {
-                    color: white;
+                    color: $fondo;
+                }
+            }
+
+            button {
+                color: $fondo;
+            }
+
+            .card {
+                width: 90%;
+                //width: 700px; //Desktop
+            }
+
+            iframe {
+                border: 2px solid orange;
+                width: 100%;
+                min-height: 300px;
+            }
+        }
+
+
+        /************ Emisiones *********/
+        .episodio {
+            border: 3px solid green;
+            display: flex;
+            flex-direction: row;
+
+            border-radius: 15px;
+            margin: 8px;
+            padding: 8px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .episodio_imagen {
+                border: 2px solid black;
+                width: 30%;
+                aspect-ratio: 1;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .episodio_contenido {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                border: 1px solid $azul-suave;
+                padding: 4px;
+                margin: 4px;
+
+                .episodio_titulo {
+                    background: $azul-fuerte;
+                    color: $fondo;
+                    text-align: center;
+                    font-size: calc(1.5* $baseSize);
+                }
+
+                .episodio_descripcion {
+                    max-height: 300px;
+                    overflow: auto;
+                    font-size: calc(0.5* $baseSize);
+                }
+                audio {
+                    width: 100%;
                 }
             }
         }
+
+        .reverse {
+            flex-direction: row-reverse;
+        }
+
+        /********************/
     }
 
     .publicidad {
@@ -266,11 +338,21 @@ body {
 
         main {
             section {
+                margin: 0.5rem;
+                padding: 0.5rem;
                 width: 100%;
-                border: 5px solid $verde-fuerte;
-                border-radius: 30px;
-            }
 
+                .card {
+                    //width: 90%;
+                    width: 100%; //Desktop
+                }
+
+                iframe {
+                    border: 2px solid orange;
+                    min-width: 700px;
+                    aspect-ratio: 16/9;
+                }
+            }
         }
 
         footer {
