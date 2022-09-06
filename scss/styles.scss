@@ -26,13 +26,9 @@ a {
 
 
 body {
-    // width: 100vw;
-    // height: 100vh;
     display: grid;
     grid-template-columns: 15% 70% 15%;
     grid-template-rows: 18vh repeat(3, auto) 5vh;
-    // grid-template-rows: repeat(5, auto);
-    //grid-template-rows: 25vw 1fr 1fr 0.2fr 5vh;
 
 
     background: $fondo;
@@ -103,7 +99,6 @@ body {
 
         section {
             display: flex;
-            // border: 1px solid red;
             a {
                 align-self: center;
                 span {
@@ -119,9 +114,15 @@ body {
         }
 
         nav {
+            height: 100%;
+            display: flex;
             ul {
                 list-style-type: none;
+                height: 100%;
                 display: flex;
+                justify-content: space-evenly;
+
+                align-self: center;
                 flex-wrap: nowrap;
                 flex-direction: column;
 
@@ -226,7 +227,7 @@ body {
                 color: $fondo;
             }
 
-            .card {
+            .card {                     //Contenedor del iframe
                 width: 90%;
                 //width: 700px; //Desktop
             }
@@ -266,6 +267,7 @@ body {
 
             .episodio_contenido {
                 width: 100%;
+                max-height: 150px;
                 display: flex;
                 flex-direction: column;
                 border: 1px solid $azul-suave;
@@ -282,16 +284,17 @@ body {
                 .episodio_descripcion {
                     max-height: 300px;
                     overflow: auto;
-                    font-size: calc(0.3* $baseSize);
+                    p {
+                        font-size: calc(1.2* $baseSize);
+                    }
                 }
                 audio {
                     width: 100%;
                 }
             }
         }
-        /********************/
+        /************ Conductores *********/
 
-        /** Conductores **/
         .carousel-inner {
             max-width: 480px;
         }
@@ -301,8 +304,8 @@ body {
             display: flex;
 
             .equipo__miembro {
-                width: 200px;
-                height: 200px;
+                max-width: 200px;
+                max-height: 200px;
                 border: 3px solid orange;
                 padding: 12px;
                 margin: 12px;
@@ -311,6 +314,59 @@ body {
                     aspect-ratio: 1;
                     object-fit: cover;
                 }
+            }
+        }
+
+        /************ Contacto *********/
+
+        form {
+            width: 50%;
+            fieldset {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                label, input, textarea {
+                    // border: 1px solid red;
+                    width: 100%;
+                    padding: 2px;
+                    margin: 2px;
+                }
+
+                label {
+                    margin-top: 20px;
+                }
+            }
+            input {
+                &.get {
+                    width: 100%;
+                    background-color: $verde-fuerte;
+                    color: $fondo;
+                    font-size: calc(1.5* $baseSize);
+                }
+            }
+        }
+
+        /************ Radio Online *********/
+
+        .reproductor-vivo, .reproductor-spotify {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h6 {
+                font-size: calc(3* $baseSize);
+            }
+
+            video {
+                width: 80%;
+            }
+
+            a img {
+                max-width: 100px;
+                aspect-ratio: 1;
+                object-fit: scale-down;
             }
         }
     }
@@ -374,8 +430,10 @@ body {
 
         header {
             nav {
+                align-items: center;
                 ul {
                     flex-direction: row;
+                    height: auto;
                     li {
                         border-bottom-left-radius: 0;
                         border-bottom-right-radius: 0;
@@ -412,6 +470,7 @@ body {
 
                 .episodio_contenido {
                     width: 60%;
+                    max-height: 400px;
                 }
             }
 

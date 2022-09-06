@@ -59,9 +59,16 @@ body header section a span {
 body header section div {
   border: 1px solid orange;
 }
+body header nav {
+  height: 100%;
+  display: flex;
+}
 body header nav ul {
   list-style-type: none;
+  height: 100%;
   display: flex;
+  justify-content: space-evenly;
+  align-self: center;
   flex-wrap: nowrap;
   flex-direction: column;
 }
@@ -99,8 +106,9 @@ body main {
   flex-direction: column;
   align-items: center;
   /************ Emisiones *********/
-  /********************/
-  /** Conductores **/
+  /************ Conductores *********/
+  /************ Contacto *********/
+  /************ Radio Online *********/
 }
 body main .titulo-principal {
   padding: 8px;
@@ -181,6 +189,7 @@ body main .episodio .episodio_imagen img {
 }
 body main .episodio .episodio_contenido {
   width: 100%;
+  max-height: 150px;
   display: flex;
   flex-direction: column;
   border: 1px solid #7399BF;
@@ -196,7 +205,9 @@ body main .episodio .episodio_contenido .episodio_titulo {
 body main .episodio .episodio_contenido .episodio_descripcion {
   max-height: 300px;
   overflow: auto;
-  font-size: calc(0.3 * (0.5rem + 0.8vw));
+}
+body main .episodio .episodio_contenido .episodio_descripcion p {
+  font-size: calc(1.2 * (0.5rem + 0.8vw));
 }
 body main .episodio .episodio_contenido audio {
   width: 100%;
@@ -209,8 +220,8 @@ body main .equipo {
   display: flex;
 }
 body main .equipo .equipo__miembro {
-  width: 200px;
-  height: 200px;
+  max-width: 200px;
+  max-height: 200px;
   border: 3px solid orange;
   padding: 12px;
   margin: 12px;
@@ -219,6 +230,46 @@ body main .equipo .equipo__miembro img {
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
+}
+body main form {
+  width: 50%;
+}
+body main form fieldset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main form fieldset label, body main form fieldset input, body main form fieldset textarea {
+  width: 100%;
+  padding: 2px;
+  margin: 2px;
+}
+body main form fieldset label {
+  margin-top: 20px;
+}
+body main form input.get {
+  width: 100%;
+  background-color: #295E05;
+  color: #edeeee;
+  font-size: calc(1.5 * (0.5rem + 0.8vw));
+}
+body main .reproductor-vivo, body main .reproductor-spotify {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main .reproductor-vivo h6, body main .reproductor-spotify h6 {
+  font-size: calc(3 * (0.5rem + 0.8vw));
+}
+body main .reproductor-vivo video, body main .reproductor-spotify video {
+  width: 80%;
+}
+body main .reproductor-vivo a img, body main .reproductor-spotify a img {
+  max-width: 100px;
+  aspect-ratio: 1;
+  object-fit: scale-down;
 }
 body .publicidad {
   grid-area: publicidad;
@@ -255,8 +306,12 @@ body footer a {
     grid-template-rows: 10vh repeat(3, auto) 7vh;
     grid-template-areas: "header header header" "nada main publicidad" "nada main publicidad" "nada main nada2" "footer footer footer";
   }
+  body header nav {
+    align-items: center;
+  }
   body header nav ul {
     flex-direction: row;
+    height: auto;
   }
   body header nav ul li {
     border-bottom-left-radius: 0;
@@ -284,6 +339,7 @@ body footer a {
   }
   body main .episodio .episodio_contenido {
     width: 60%;
+    max-height: 400px;
   }
   body main .reverse {
     flex-direction: row-reverse;
