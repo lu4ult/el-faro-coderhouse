@@ -4,6 +4,8 @@ print("hola")
 lista_archivos = os.listdir('./pages/emisiones/audios/')
 episodios = []
 descripciones = []
+
+ind = "\t"  #para generar la indentación
 #print(lista_archivos)
 for i in lista_archivos:
         episodios.append(i.replace(".mp3","")) #tenemos que sacar el formato de archivo en el nombre, asi que los guardamos en un nuevo array
@@ -22,25 +24,25 @@ with open(".\pages\emisiones\descripciones.json") as json_file:
 #generamos el archivo html en función de la lista de episodios
 
 with open(".\pages\emisiones\emisiones.html", 'w') as f:
-    f.write("<!DOCTYPE html><html><head>\n<meta charset=""utf-8""><title>El Faro - Faros del pasado</title>\n")
+    f.write("<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<meta charset=""utf-8"">\n\t\t<title>El Faro - Faros del pasado</title>\n")
 
-    f.write("<!-- AOS -->\n<link href=\"https://unpkg.com/aos@2.3.1/dist/aos.css\" rel=\"stylesheet\">")
-    f.write("\n<script src=\"https://unpkg.com/aos@2.3.1/dist/aos.js\"></script>")
-    f.write("\n<link rel=\"stylesheet\" href=\"../../css/styles.css\">\n\n<link rel=\"icon\" type=\"image/x-icon\" href=\"../favicon.png\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">")
-    f.write("\n</head>\n<body>\n\n")
+    f.write("\t\t<!-- AOS -->\n\t\t<link href=\"https://unpkg.com/aos@2.3.1/dist/aos.css\" rel=\"stylesheet\">")
+    f.write("\n\t\t<script src=\"https://unpkg.com/aos@2.3.1/dist/aos.js\"></script>")
+    f.write("\n\t\t<link rel=\"stylesheet\" href=\"../../css/styles.css\">\n\n\t\t<link rel=\"icon\" type=\"image/x-icon\" href=\"../favicon.png\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">")
+    f.write("\n\t</head>\n\n\t<body>")
 
     #reemplazar por header
     #f.write("<a href=\"../../index.html\">Volver</a>")
 
-    f.write("\n<header>\n\t<div class=\"logo-container centrado\">")
-    f.write("\n\t\t<img src=\"../../images/logo-isotipo-limpio-removebg-preview.png\" alt=\"El Faro Isotipo\">")
-    f.write("\n\t</div>\n\t<section>\n\t\t<a href=\"../../index.html\"><span id=\"titulo\">El </span><span id=\"titulo2\">Faro,</span><span id=\"titulo3\"> un programa de ciencia</span></a>\n\t</section>")
-    f.write("\n\t<nav><ul>")
-    f.write("\n\t\t<li class=\"active\"><a href=\"#\">Emitidos</a></li>")
-    f.write("\n\t\t<li><a href=\"../../pages/conductores.html\">Conduccci&oacuten</a></li>")
-    f.write("\n\t\t<li><a href=\"../../pages/contacto.html\">Contacto</a></li>")
-    f.write("\n\t\t<li><a href=\"../../pages/radio-online.html\">Radio Online</a></li>")
-    f.write("\n\t</ul></nav>\n</header>\n\n<main>\n")
+    f.write("\n\t\t<header>\n\t\t\t<div class=\"logo-container centrado\">")
+    f.write("\n"+ind*4+"<img src=\"../../images/logo-isotipo-limpio-removebg-preview.png\" alt=\"El Faro Isotipo\">")
+    f.write("\n\t\t\t</div>\n\t\t\t<section>\n\t\t\t\t<a href=\"../../index.html\"><span id=\"titulo\">El </span><span id=\"titulo2\">Faro,</span><span id=\"titulo3\"> un programa de ciencia</span></a>\n\t\t\t</section>")
+    f.write("\n\t\t\t<nav>\n"+ind*4+"<ul>")
+    f.write("\n"+ind*5+"<li class=\"active\"><a href=\"#\">Emitidos</a></li>")
+    f.write("\n"+ind*5+"<li><a href=\"../../pages/conductores.html\">Conduccci&oacuten</a></li>")
+    f.write("\n"+ind*5+"<li><a href=\"../../pages/contacto.html\">Contacto</a></li>")
+    f.write("\n"+ind*5+"<li><a href=\"../../pages/radio-online.html\">Radio Online</a></li>")
+    f.write("\n"+ind*4+"</ul>\n\t\t\t</nav>\n\t\t</header>\n\n\t\t<main>\n")
 
     count = 0
     for i in episodios:
@@ -48,44 +50,44 @@ with open(".\pages\emisiones\emisiones.html", 'w') as f:
         print(descripciones[i][1])
     for i in episodios:
         if count%2 == 1:
-            f.write("\t<div data-aos=\"fade-up-right\" class=\"episodio reverse\">\n")
+            f.write(ind*3+"<div data-aos=\"fade-up-right\" class=\"episodio reverse\">\n")
         else:
-            f.write("\t<div data-aos=\"fade-up-left\"class=\"episodio\">\n")
+            f.write(ind*3+"<div data-aos=\"fade-up-left\" class=\"episodio\">\n")
 
-        f.write("\t\t<div class=\"episodio_imagen\"><img src=\"../emisiones/images/" + i + ".webp\"></div>\n")
-        f.write("\t\t<div class=\"episodio_contenido\">\n")
-        f.write("\t\t\t<div class=\"episodio_titulo\">Programa " +descripciones[i][0] +" - " + i +"</div>\n")
-        f.write("\t\t\t<div class=\"episodio_descripcion\">\n")
+        f.write(ind*4+"<div class=\"episodio_imagen\">\n"+ind*5+"<img src=\"../emisiones/images/" + i + ".webp\">\n"+ind*4+"</div>\n")
+        f.write(ind*4+"<div class=\"episodio_contenido\">\n")
+        f.write(ind*5+"<div class=\"episodio_titulo\">Programa " +descripciones[i][0] +" - " + i +"</div>\n")
+        f.write(ind*5+"<div class=\"episodio_descripcion\">\n")
 
         try:
-            f.write("\t\t\t\t<p>"+descripciones[i][1]+"</p>\n")
+            f.write(ind*6+"<p>"+descripciones[i][1]+"</p>\n")
         except:
-            f.write("\t\t\t\t<p>Sin descripcion en JSON</p>\n")
+            f.write(ind*6+"<p>Sin descripcion en JSON</p>\n")
 
-        f.write("\t\t\t</div>\n")
+        f.write(ind*5+"</div>\n")
         if count == 0:
             #f.write("\t\t\t<audio controls autoplay><source preload=\"true\" src=\"audios/"+ i + ".mp3\" type=\"audio/mpeg\"></audio>\n")
-            f.write("\t\t<audio controls><source preload=\"true\" src=\"audios/"+ i + ".mp3\" type=\"audio/mpeg\"></audio>\n")
+            f.write(ind*5+"<audio controls>\n"+ind*6+"<source preload=\"true\" src=\"audios/"+ i + ".mp3\" type=\"audio/mpeg\">\n"+ind*5+"</audio>\n")
         else:
-            f.write("\t\t\t<audio controls><source src=\"audios/"+ i + ".mp3\" type=\"audio/mpeg\"></audio>\n")
+            f.write(ind*5+"<audio controls>\n"+ind*6+"<source preload=\"true\" src=\"audios/"+ i + ".mp3\" type=\"audio/mpeg\">\n"+ind*4+"</audio>\n")
 
-        f.write("\t\t</div>\n") #cerrar div class contenido
-        f.write("\t</div>\n\n")#cerrar div class episodio
+        f.write(ind*4+"</div>\n") #cerrar div class contenido
+        f.write(ind*3+"</div>\n\n")#cerrar div class episodio
         count += 1
 
-    f.write("</main>\n")
-    f.write("<div class=\"publicidad\">\n")
+    f.write("\t\t</main>\n")
+    f.write("\t\t<div class=\"publicidad\">\n")
 
-    f.write("\t<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/laarena.png\" alt=\"Publicidad diario La Arena\"></div>\n")
-    f.write("\t<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/unlpam.jpg\" alt=\"Publicidad Universidad de La Pampa\"></div>\n")
-    f.write("\t<div class=\"publicidad__item centrado\"><div>Publicite aquí!</div></div>\n")
-    f.write("\t<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/atuel.jpg\" alt=\"Propaganda Gobierno de La Pampa\"></div>\n")
-    f.write("</div>\n\n")
+    f.write(ind*3+"<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/laarena.png\" alt=\"Publicidad diario La Arena\"></div>\n")
+    f.write(ind*3+"<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/unlpam.jpg\" alt=\"Publicidad Universidad de La Pampa\"></div>\n")
+    f.write(ind*3+"<div class=\"publicidad__item centrado\"><div>Publicite aquí!</div></div>\n")
+    f.write(ind*3+"<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/atuel.jpg\" alt=\"Propaganda Gobierno de La Pampa\"></div>\n")
+    f.write("\t\t</div>\n\n")
 
-    f.write("<footer><a href=\"https://lu4ult.github.io\" target=\"__blank\">Desarrollado por Lautaro Tourn</a></footer>\n")
+    f.write("\t\t<footer><a href=\"https://lu4ult.github.io\" target=\"__blank\">Desarrollado por Lautaro Tourn</a></footer>\n")
     #aos
-    f.write("<script>AOS.init();</script>")
-    f.write("\n\n</body>\n</html>")
+    f.write("\t\t<script>AOS.init();</script>")
+    f.write("\n\n\t</body>\n</html>")
     f.close()
 
 with open(".\pages\emisiones\wa-link.html", 'w') as f:
