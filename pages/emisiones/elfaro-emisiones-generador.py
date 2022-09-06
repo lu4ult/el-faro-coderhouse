@@ -6,7 +6,7 @@ episodios = []
 descripciones = []
 #print(lista_archivos)
 for i in lista_archivos:
-    episodios.append(i.replace(".mp3","")) #tenemos que sacar el formato de archivo en el nombre, asi que los guardamos en un nuevo array
+        episodios.append(i.replace(".mp3","")) #tenemos que sacar el formato de archivo en el nombre, asi que los guardamos en un nuevo array
 episodios.sort(reverse=True)
 
 #print(episodios)
@@ -22,21 +22,25 @@ with open(".\pages\emisiones\descripciones.json") as json_file:
 #generamos el archivo html en función de la lista de episodios
 
 with open(".\pages\emisiones\emisiones.html", 'w') as f:
-    f.write("<!DOCTYPE html><html><head>\n<meta charset=""utf-8""><title>Faros del pasado</title>\n")
+    f.write("<!DOCTYPE html><html><head>\n<meta charset=""utf-8""><title>El Faro - Faros del pasado</title>\n")
 
-    f.write("<link rel=\"stylesheet\" href=\"../../css/styles.css\">\n\n<link rel=\"icon\" type=\"image/x-icon\" href=\"../favicon.png\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">")
-    # f.write("\n<script type=\"text/javascript\">\n\t(function(c,l,a,r,i,t,y){\n\t\tc[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};\n\t\tt=l.createElement(r);t.async=1;t.src=\"https://www.clarity.ms/tag/\"+i;\n\t\ty=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);\n\t\t})(window, document, \"clarity\", \"script\", \"cfz94uis3i\");\n</script>")
     f.write("<!-- AOS -->\n<link href=\"https://unpkg.com/aos@2.3.1/dist/aos.css\" rel=\"stylesheet\">")
-    f.write("<script src=\"https://unpkg.com/aos@2.3.1/dist/aos.js\"></script>")
-
-    f.write("</head>\n<body>\n<main>\n")
+    f.write("\n<script src=\"https://unpkg.com/aos@2.3.1/dist/aos.js\"></script>")
+    f.write("\n<link rel=\"stylesheet\" href=\"../../css/styles.css\">\n\n<link rel=\"icon\" type=\"image/x-icon\" href=\"../favicon.png\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">")
+    f.write("\n</head>\n<body>\n\n")
 
     #reemplazar por header
-    f.write("<a href=\"../../index.html\">Volver</a>")
-    # f.write("<header><a href=\"../elfaro.html\"><img src=\"../elfarologo.jpg\"></a><h2>Faros del pasado</h2></header>\n\n")
-    # f.write("<h4>Aqu&iacute; encontrar&aacute;s las grabaciones de los programas emitidos. Usando los controles del reproductor podr&aacute;s adelantar el audio, descargarlo y reproducirlo en 1.5x</h4>")
-    # f.write("<a href=\"https://open.spotify.com/show/26ZvU92WzcChhUnhaSxzPw\" target=\"__blank\">\n<div class=\"spotify episodio\"><img src=\"../spotify-logo.png\"></img>")
-    # f.write("<p>Escuchanos en spotify!</p></div></a>\n\n\n")
+    #f.write("<a href=\"../../index.html\">Volver</a>")
+
+    f.write("\n<header>\n\t<div class=\"logo-container centrado\">")
+    f.write("\n\t\t<img src=\"../../images/logo-isotipo-limpio-removebg-preview.png\" alt=\"El Faro Isotipo\">")
+    f.write("\n\t</div>\n\t<section>\n\t\t<a href=\"../../index.html\"><span id=\"titulo\">El </span><span id=\"titulo2\">Faro,</span><span id=\"titulo3\"> un programa de ciencia</span></a>\n\t</section>")
+    f.write("\n\t<nav><ul>")
+    f.write("\n\t\t<li class=\"active\"><a href=\"#\">Emitidos</a></li>")
+    f.write("\n\t\t<li><a href=\"../../pages/conductores.html\">Conduccci&oacuten</a></li>")
+    f.write("\n\t\t<li><a href=\"../../pages/contacto.html\">Contacto</a></li>")
+    f.write("\n\t\t<li><a href=\"../../pages/radio-online.html\">Radio Online</a></li>")
+    f.write("\n\t</ul></nav>\n</header>\n\n<main>\n")
 
     count = 0
     for i in episodios:
@@ -72,7 +76,7 @@ with open(".\pages\emisiones\emisiones.html", 'w') as f:
     f.write("</main>\n")
     f.write("<div class=\"publicidad\">\n")
 
-    f.write("<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/laarena.png\" alt=\"Publicidad diario La Arena\"></div>\n")
+    f.write("\t<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/laarena.png\" alt=\"Publicidad diario La Arena\"></div>\n")
     f.write("\t<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/unlpam.jpg\" alt=\"Publicidad Universidad de La Pampa\"></div>\n")
     f.write("\t<div class=\"publicidad__item centrado\"><div>Publicite aquí!</div></div>\n")
     f.write("\t<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/atuel.jpg\" alt=\"Propaganda Gobierno de La Pampa\"></div>\n")

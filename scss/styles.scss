@@ -17,15 +17,16 @@
     color: $azul-fuerte;
 }
 
-
-
-
 a {
     text-decoration: none;
+    &:visited, &:active {
+        color: $azul-suave;
+    }
 }
 
 
 body {
+
     display: grid;
     grid-template-columns: 15% 70% 15%;
     grid-template-rows: 18vh repeat(3, auto) 5vh;
@@ -39,12 +40,6 @@ body {
         "main main main"
         "publicidad publicidad publicidad"
         "footer footer footer";
-
-    // column-gap: 8px;
-    // row-gap: 8px;
-    // // border: 3px solid red;
-    // overflow-x: hidden; //Para ocultar el scroll-bar
-    // overflow-y: auto;
 
     .centrado {
         display: flex;
@@ -62,30 +57,10 @@ body {
         justify-content: space-between;
         align-items: center;
 
-        // background: $azul;
-
         .logo-container {
 
             height: 100%;
             background: $azul-suave;
-
-            // #primero {
-            //     position: absolute;
-            //     height: 200px;
-            //     width: 200px;
-            //     top: 40px;
-            //     left: 40px;
-            //     z-index: -1;
-            // }
-
-            // #segundo {
-            //     position: absolute;
-            //     height: 200px;
-            //     width: 200px;
-            //     top: 40px;
-            //     left: 40px;
-            //     z-index: 1;
-            // }
 
             img {
                 height: 100%;
@@ -131,7 +106,7 @@ body {
                     padding: 4px;
                     text-align: center;
                     background: $fondo;
-                    color: $azul-fuerte;
+                    // color: $azul-fuerte;
                     border: 2px solid $fondo;
                     border-bottom-left-radius: 5px;
                     border-bottom-right-radius: 5px;
@@ -229,7 +204,7 @@ body {
 
             .card {                     //Contenedor del iframe
                 width: 90%;
-                //width: 700px; //Desktop
+                //width: 700px;         //Desktop
             }
 
             iframe {
@@ -322,9 +297,6 @@ body {
         form {
             width: 50%;
             fieldset {
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 label, input, textarea {
                     // border: 1px solid red;
                     width: 100%;
@@ -333,11 +305,11 @@ body {
                 }
 
                 label {
-                    margin-top: 20px;
+                    margin-top: 25px;
                 }
             }
             input {
-                &.get {
+                &.get {                 //Botón enviar
                     width: 100%;
                     background-color: $verde-fuerte;
                     color: $fondo;
@@ -399,13 +371,16 @@ body {
         align-items: center;
         background: $azul-oscuro;
         a {
-            color: white;
+            color: $fondo;
+            &:active, &:visited {
+                color: $fondo;
+            }
         }
     }
 }
 
 
-// @media only screen and (min-width: 320px) {
+// @media only screen and (min-width: 320px) { //Mobile First
 // }
 
 
@@ -451,7 +426,6 @@ body {
                 width: 100%;
 
                 .card {
-                    //width: 90%;
                     width: 100%; //Desktop
                 }
 
@@ -474,6 +448,8 @@ body {
                 }
             }
 
+
+            //Los programas impares el script les agrega esta clase.
             .reverse {
                 flex-direction: row-reverse;
             }
