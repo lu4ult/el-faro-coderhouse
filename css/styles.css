@@ -1,3 +1,8 @@
+.centrarConFlexCol, body main .reproductor-vivo, body main .reproductor-spotify, body main .social .social__fb a, body main .social .social__fb, body main .social .social__wa a, body main .social .social__wa, body main .social .social__ig a, body main .social .social__ig, body main .episodio .episodio_contenido, body main section {
+  display: flex;
+  flex-direction: column;
+}
+
 @font-face {
   font-family: "Myriad";
   src: url(../assets/fonts/myriad.otf);
@@ -113,8 +118,8 @@ body main {
   /************ Radio Online *********/
 }
 body main .titulo-principal {
-  padding: 8px;
   margin: 8px;
+  padding: 8px;
   margin-bottom: 20px;
 }
 body main .titulo-principal h1 {
@@ -135,8 +140,6 @@ body main section {
   margin: 8px;
   padding: 8px;
   margin-top: 16px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   flex-wrap: nowrap;
   width: 80%;
@@ -192,11 +195,9 @@ body main .episodio .episodio_imagen img {
 body main .episodio .episodio_contenido {
   width: 100%;
   max-height: 150px;
-  display: flex;
-  flex-direction: column;
   border: 1px solid #7399BF;
-  padding: 4px;
   margin: 4px;
+  padding: 4px;
 }
 body main .episodio .episodio_contenido .episodio_titulo {
   background: #0017AC;
@@ -225,8 +226,8 @@ body main .equipo .equipo__miembro {
   max-width: 200px;
   max-height: 200px;
   border: 3px solid orange;
-  padding: 12px;
   margin: 12px;
+  padding: 12px;
 }
 body main .equipo .equipo__miembro img {
   width: 100%;
@@ -238,10 +239,10 @@ body main form {
 }
 body main form fieldset label, body main form fieldset input, body main form fieldset textarea {
   width: 100%;
-  padding: 2px;
   margin: 2px;
+  padding: 2px;
 }
-body main form fieldset label {
+body main form fieldset label, body main form fieldset input, body main form fieldset textarea {
   margin-top: 25px;
 }
 body main form input.get {
@@ -250,10 +251,68 @@ body main form input.get {
   color: #edeeee;
   font-size: calc(1.5 * (0.5rem + 0.8vw));
 }
+body main .social {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+body main .social div {
+  height: 5vw;
+  aspect-ratio: 1;
+}
+body main .social .social__ig {
+  border-radius: 50%;
+  border: 1px solid #8a3ab9;
+  justify-content: center;
+  align-items: center;
+}
+body main .social .social__ig:hover {
+  background-image: radial-gradient(transparent 40%, #8a3ab9 80%);
+}
+body main .social .social__ig a {
+  justify-content: center;
+  align-items: center;
+}
+body main .social .social__ig a img {
+  width: 70%;
+  aspect-ratio: 1;
+}
+body main .social .social__wa {
+  border-radius: 50%;
+  border: 1px solid #25d366;
+  justify-content: center;
+  align-items: center;
+}
+body main .social .social__wa:hover {
+  background-image: radial-gradient(transparent 40%, #25d366 80%);
+}
+body main .social .social__wa a {
+  justify-content: center;
+  align-items: center;
+}
+body main .social .social__wa a img {
+  width: 70%;
+  aspect-ratio: 1;
+}
+body main .social .social__fb {
+  border-radius: 50%;
+  border: 1px solid #3b5998;
+  justify-content: center;
+  align-items: center;
+}
+body main .social .social__fb:hover {
+  background-image: radial-gradient(transparent 40%, #3b5998 80%);
+}
+body main .social .social__fb a {
+  justify-content: center;
+  align-items: center;
+}
+body main .social .social__fb a img {
+  width: 70%;
+  aspect-ratio: 1;
+}
 body main .reproductor-vivo, body main .reproductor-spotify {
   width: 75%;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
