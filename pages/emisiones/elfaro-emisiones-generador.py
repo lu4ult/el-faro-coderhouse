@@ -25,8 +25,9 @@ with open(".\pages\emisiones\descripciones.json") as json_file:
 
 with open(".\pages\emisiones\emisiones.html", 'w') as f:
     f.write("<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<meta charset=""utf-8"">\n\t\t<title>El Faro - Faros del pasado</title>\n")
+    f.write("\t\t<link rel=\"icon\" type=\"image/x-icon\" href=\"/images/favicon.png\">\n")
 
-    f.write("\t\t<!-- AOS -->\n\t\t<link href=\"https://unpkg.com/aos@2.3.1/dist/aos.css\" rel=\"stylesheet\">")
+    f.write("\n\t\t<!-- AOS -->\n\t\t<link href=\"https://unpkg.com/aos@2.3.1/dist/aos.css\" rel=\"stylesheet\">")
     f.write("\n\t\t<script src=\"https://unpkg.com/aos@2.3.1/dist/aos.js\"></script>")
     f.write("\n\t\t<link rel=\"stylesheet\" href=\"../../css/styles.css\">\n\n\t\t<link rel=\"icon\" type=\"image/x-icon\" href=\"../favicon.png\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">")
     f.write("\n\t</head>\n\n\t<body>")
@@ -54,7 +55,7 @@ with open(".\pages\emisiones\emisiones.html", 'w') as f:
         else:
             f.write(ind*3+"<div data-aos=\"fade-up-left\" class=\"episodio\">\n")
 
-        f.write(ind*4+"<div class=\"episodio_imagen\">\n"+ind*5+"<img src=\"../emisiones/images/" + i + ".webp\">\n"+ind*4+"</div>\n")
+        f.write(ind*4+"<div class=\"episodio_imagen\">\n"+ind*5+"<img src=\"../emisiones/images/" + i + ".webp\" alt=\"Imagen programa "+i+"\">\n"+ind*4+"</div>\n")
         f.write(ind*4+"<div class=\"episodio_contenido\">\n")
         f.write(ind*5+"<div class=\"episodio_titulo\">Programa " +descripciones[i][0] +" - " + i +"</div>\n")
         f.write(ind*5+"<div class=\"episodio_descripcion\">\n")
@@ -80,7 +81,7 @@ with open(".\pages\emisiones\emisiones.html", 'w') as f:
 
     f.write(ind*3+"<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/laarena.png\" alt=\"Publicidad diario La Arena\"></div>\n")
     f.write(ind*3+"<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/unlpam.jpg\" alt=\"Publicidad Universidad de La Pampa\"></div>\n")
-    f.write(ind*3+"<div class=\"publicidad__item centrado\"><div>Publicite aquí!</div></div>\n")
+    f.write(ind*3+"<div class=\"publicidad__item centrado\"><div>Publicite aqu&iacute!</div></div>\n")
     f.write(ind*3+"<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/atuel.jpg\" alt=\"Propaganda Gobierno de La Pampa\"></div>\n")
     f.write("\t\t</div>\n\n")
 
