@@ -1,6 +1,42 @@
 @import './_variables';
 // @import './_header';
 
+
+//Extend
+.centrarConFlexCol {
+    display: flex;
+    flex-direction: column;
+}
+
+//Mixin
+@mixin redes($_color) {
+
+    border-radius: 50%;
+    border: 1px solid $_color;
+    @extend .centrarConFlexCol;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-image: radial-gradient(transparent 40%, $_color 80%);
+    }
+
+    a {
+        @if $debug == 1 {
+            border: 2px solid orange;
+        }
+
+        @extend .centrarConFlexCol;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 70%;
+            aspect-ratio: 1;
+        }
+    }
+
+}
+
 @font-face {
     font-family: 'Myriad';
     src: url(../assets/fonts/myriad.otf);
@@ -10,7 +46,10 @@
     margin: 0;
     padding: 0;
     box-sizing: content-box;
-    // border: 1px solid red;
+
+    @if $debug == 1 {
+        border: 1px solid red;
+    }
     // font-size: calc(1rem + 1.2vw);
     font-size: calc(1* $baseSize);
     font-family: 'Myriad', cursive;
@@ -20,7 +59,12 @@
 a {
     text-decoration: none;
     &:visited, &:active {
-        color: $azul-fuerte;
+        @if $texto-azul == 1 {
+            color: $azul-fuerte;
+        }
+        @else {
+            color: $azul-suave;
+        }
     }
 }
 
@@ -102,8 +146,8 @@ body {
                 flex-direction: column;
 
                 li {
-                    margin: 4px;
-                    padding: 4px;
+                    margin: $espacio;
+                    padding: $espacio;
                     text-align: center;
                     background: $fondo;
                     // color: $azul-fuerte;
@@ -136,17 +180,17 @@ body {
     main {
         grid-area: main;
 
-        margin: 8px;
-        padding: 8px;
+        margin: $espacio*2;
+        padding: $espacio*2;
 
         display: flex;
         flex-direction: column;
         align-items: center;
 
         .titulo-principal {
-            padding: 8px;
-            margin: 8px;
-            margin-bottom: 20px;
+            margin: $espacio*2;
+            padding: $espacio*2;
+            margin-bottom: $espacio*5;
             h1 {
                 display: inline-block;
                 // border: 1px solid red;
@@ -168,11 +212,13 @@ body {
 
 
         section {
-            margin: 8px;
-            padding: 8px;
-            margin-top: 16px;
-            display: flex;
-            flex-direction: column;
+            margin: $espacio*2;
+            padding: $espacio*2;
+            margin-top: $espacio*4;
+
+            //display: flex;
+            //flex-direction: column;
+            @extend .centrarConFlexCol;
             align-items: center;
             flex-wrap: nowrap;
 
@@ -222,10 +268,11 @@ body {
             flex-direction: row;
 
             border-radius: 15px;
-            margin: 8px;
-            padding: 8px;
+            margin: $espacio*2;
+            padding: $espacio*2;
             display: flex;
             flex-direction: column;
+            //@extend .centrarConFlexCol;
             justify-content: space-evenly;
             align-items: center;
 
@@ -243,11 +290,12 @@ body {
             .episodio_contenido {
                 width: 100%;
                 max-height: 150px;
-                display: flex;
-                flex-direction: column;
+                //display: flex;
+                //flex-direction: column;
+                @extend .centrarConFlexCol;
                 border: 1px solid $azul-suave;
-                padding: 4px;
-                margin: 4px;
+                margin: $espacio*1;
+                padding: $espacio*1;
 
                 .episodio_titulo {
                     background: $azul-fuerte;
@@ -282,8 +330,8 @@ body {
                 max-width: 200px;
                 max-height: 200px;
                 border: 3px solid orange;
-                padding: 12px;
-                margin: 12px;
+                margin: $espacio*3;
+                padding: $espacio*3;
                 img {
                     width: 100%;
                     aspect-ratio: 1;
@@ -297,11 +345,21 @@ body {
         form {
             width: 50%;
             fieldset {
-                label, input, textarea {
-                    // border: 1px solid red;
+                // label, input, textarea {
+                //     // border: 1px solid red;
+                //     width: 100%;
+                //     margin: $espacio/2;         //To-Do: deprecated
+                //     padding: $espacio/2;
+                // }
+
+                label {
                     width: 100%;
-                    padding: 2px;
-                    margin: 2px;
+                    margin: $espacio/2;         //To-Do: deprecated
+                    padding: $espacio/2;
+                }
+
+                input, textarea {
+                    @extend label;
                 }
 
                 label {
@@ -318,12 +376,40 @@ body {
             }
         }
 
+        .social {
+            width: 100%;
+
+            display: flex;
+            justify-content: space-evenly;
+
+            div {
+                height: 5vw;
+                aspect-ratio: 1;
+            }
+
+            .social__ig {
+                @include redes($ig)
+            }
+
+            .social__wa {
+                @include redes($wa)
+            }
+
+            .social__fb {
+                @include redes($fb)
+            }
+            .social__yt {
+                @include redes(#ff0000)
+            }
+        }
+
         /************ Radio Online *********/
 
         .reproductor-vivo, .reproductor-spotify {
             width: 75%;
-            display: flex;
-            flex-direction: column;
+            //display: flex;
+            //flex-direction: column;
+            @extend .centrarConFlexCol;
             justify-content: center;
             align-items: center;
 
@@ -461,6 +547,7 @@ body {
 
         .publicidad {
             flex-direction: column;
+            //@extend .centrarConFlexCol;
             justify-content: center;
             .publicidad__item {
 
