@@ -1,4 +1,4 @@
-.centrarConFlexCol, body main .reproductor-vivo, body main .reproductor-spotify, body main .social .social__fb a, body main .social .social__fb, body main .social .social__wa a, body main .social .social__wa, body main .social .social__ig a, body main .social .social__ig, body main .episodio .episodio_contenido, body main section {
+.centrarConFlexCol, body main .reproductor-vivo, body main .reproductor-spotify, body main .social .social__yt a, body main .social .social__yt, body main .social .social__fb a, body main .social .social__fb, body main .social .social__wa a, body main .social .social__wa, body main .social .social__ig a, body main .social .social__ig, body main .episodio .episodio_contenido, body main section {
   display: flex;
   flex-direction: column;
 }
@@ -308,6 +308,23 @@ body main .social .social__fb a {
   align-items: center;
 }
 body main .social .social__fb a img {
+  width: 70%;
+  aspect-ratio: 1;
+}
+body main .social .social__yt {
+  border-radius: 50%;
+  border: 1px solid #ff0000;
+  justify-content: center;
+  align-items: center;
+}
+body main .social .social__yt:hover {
+  background-image: radial-gradient(transparent 40%, #ff0000 80%);
+}
+body main .social .social__yt a {
+  justify-content: center;
+  align-items: center;
+}
+body main .social .social__yt a img {
   width: 70%;
   aspect-ratio: 1;
 }

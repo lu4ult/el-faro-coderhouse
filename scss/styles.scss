@@ -398,6 +398,9 @@ body {
             .social__fb {
                 @include redes($fb)
             }
+            .social__yt {
+                @include redes(#ff0000)
+            }
         }
 
         /************ Radio Online *********/
