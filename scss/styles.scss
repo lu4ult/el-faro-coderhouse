@@ -57,6 +57,16 @@
     }
 }
 
+
+//Mapa
+//Utilizado en /** Conductores **/ -> .equipo
+$mapaMiembros: (
+    miembro1: $azul-fuerte,
+    miembro2: $azul-oscuro,
+    miembro3: $azul-suave
+);
+
+
 @font-face {
     font-family: 'Myriad';
     src: url(../assets/fonts/myriad.otf);
@@ -346,16 +356,23 @@ body {
             border: 2px solid black;
             display: flex;
 
-            .equipo__miembro {
+            div {
                 max-width: 200px;
                 max-height: 200px;
-                border: 3px solid orange;
+                //border: 3px solid orange;
+                border: 5px solid orange;
                 margin: $espacio*3;
                 padding: $espacio*3;
                 img {
                     width: 100%;
                     aspect-ratio: 1;
                     object-fit: cover;
+                }
+            }
+
+            @each $conductor, $color in $mapaMiembros {
+                .equipo__#{$conductor} {
+                    border-color: $color;
                 }
             }
         }
