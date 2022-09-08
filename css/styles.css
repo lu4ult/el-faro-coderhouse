@@ -1,6 +1,26 @@
-.centrarConFlexCol, body main .reproductor-vivo, body main .reproductor-spotify, body main .social .social__yt a, body main .social .social__yt, body main .social .social__fb a, body main .social .social__fb, body main .social .social__wa a, body main .social .social__wa, body main .social .social__ig a, body main .social .social__ig, body main .episodio .episodio_contenido, body main section {
+.centrarConFlexCol, body main .reproductor-vivo, body main .reproductor-spotify, body main .social .social__yt a, body main .social .social__yt, body main .social .social__fb a, body main .social .social__fb, body main .social .social__wa a, body main .social .social__wa, body main .social .social__ig a, body main .social .social__ig, body main .episodio .episodio_contenido, body main .episodio .episodio_imagen, body main section {
   display: flex;
   flex-direction: column;
+}
+
+.publ--1 {
+  border: 3px solid #7399BF;
+  border-radius: 5px;
+}
+
+.publ--2 {
+  border: 3px solid #0017AC;
+  border-radius: 5px;
+}
+
+.publ--3 {
+  border: 3px solid #7399BF;
+  border-radius: 5px;
+}
+
+.publ--4 {
+  border: 3px solid #0017AC;
+  border-radius: 5px;
 }
 
 @font-face {
@@ -184,20 +204,20 @@ body main .episodio {
   align-items: center;
 }
 body main .episodio .episodio_imagen {
-  border: 2px solid black;
-  width: 70%;
+  width: 80%;
   aspect-ratio: 1;
+  justify-content: center;
 }
 body main .episodio .episodio_imagen img {
   width: 100%;
-  object-fit: cover;
+  object-fit: scale-down;
 }
 body main .episodio .episodio_contenido {
-  width: 100%;
   max-height: 150px;
   border: 1px solid #7399BF;
   margin: 4px;
   padding: 4px;
+  width: 100%;
 }
 body main .episodio .episodio_contenido .episodio_titulo {
   background: #0017AC;
@@ -262,12 +282,12 @@ body main .social div {
 }
 body main .social .social__ig {
   border-radius: 50%;
-  border: 1px solid #8a3ab9;
+  border: 1px solid #833AB4;
   justify-content: center;
   align-items: center;
 }
 body main .social .social__ig:hover {
-  background-image: radial-gradient(transparent 40%, #8a3ab9 80%);
+  background-image: radial-gradient(transparent 40%, #833AB4 80%);
 }
 body main .social .social__ig a {
   justify-content: center;
@@ -296,12 +316,12 @@ body main .social .social__wa a img {
 }
 body main .social .social__fb {
   border-radius: 50%;
-  border: 1px solid #3b5998;
+  border: 1px solid #4267B2;
   justify-content: center;
   align-items: center;
 }
 body main .social .social__fb:hover {
-  background-image: radial-gradient(transparent 40%, #3b5998 80%);
+  background-image: radial-gradient(transparent 40%, #4267B2 80%);
 }
 body main .social .social__fb a {
   justify-content: center;
@@ -351,12 +371,21 @@ body .publicidad {
 }
 body .publicidad .publicidad__item {
   margin: 8px;
-  border: 3px solid black;
+  padding: 2px;
+  background: #edeeee;
 }
 body .publicidad .publicidad__item img {
-  max-height: 50px;
-  aspect-ratio: auto;
-  object-fit: scale-down;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+body .publicidad .publ--4 {
+  z-index: 10;
+}
+body .publicidad .publ--4:hover {
+  transform: translateX(-50%) translateY(-50%) scale(2);
+  transition: all 1s;
 }
 body footer {
   grid-area: footer;
@@ -411,10 +440,10 @@ body footer a:active, body footer a:visited {
     flex-direction: row;
   }
   body main .episodio .episodio_imagen {
-    width: 30%;
+    width: 50%;
   }
   body main .episodio .episodio_contenido {
-    width: 60%;
+    width: 50%;
     max-height: 400px;
   }
   body main .reverse {
@@ -423,9 +452,5 @@ body footer a:active, body footer a:visited {
   body .publicidad {
     flex-direction: column;
     justify-content: center;
-  }
-  body .publicidad .publicidad__item img {
-    max-height: 200px;
-    width: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */

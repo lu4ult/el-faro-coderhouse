@@ -25,7 +25,7 @@ with open(".\pages\emisiones\descripciones.json") as json_file:
 
 with open(".\pages\emisiones\emisiones.html", 'w') as f:
     f.write("<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<meta charset=""utf-8"">\n\t\t<title>El Faro - Faros del pasado</title>\n")
-    f.write("\t\t<link rel=\"icon\" type=\"image/x-icon\" href=\"/images/favicon.png\">\n")
+    f.write("\t\t<link rel=\"icon\" type=\"image/x-icon\" href=\"../../images/favicon.png\">\n")
 
     f.write("\n\t\t<!-- AOS -->\n\t\t<link href=\"https://unpkg.com/aos@2.3.1/dist/aos.css\" rel=\"stylesheet\">")
     f.write("\n\t\t<script src=\"https://unpkg.com/aos@2.3.1/dist/aos.js\"></script>")
@@ -79,10 +79,11 @@ with open(".\pages\emisiones\emisiones.html", 'w') as f:
     f.write("\t\t</main>\n")
     f.write("\t\t<div class=\"publicidad\">\n")
 
-    f.write(ind*3+"<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/laarena.png\" alt=\"Publicidad diario La Arena\"></div>\n")
-    f.write(ind*3+"<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/unlpam.jpg\" alt=\"Publicidad Universidad de La Pampa\"></div>\n")
-    f.write(ind*3+"<div class=\"publicidad__item centrado\"><div>Publicite aqu&iacute!</div></div>\n")
-    f.write(ind*3+"<div class=\"publicidad__item centrado\"><img src=\"../../images/publicidad/atuel.jpg\" alt=\"Propaganda Gobierno de La Pampa\"></div>\n")
+    #  <div class="publicidad__item  publ--1 centrado"><img src="../publicidad/laarena.png" alt="Publicidad diario La Arena"></div>
+    f.write(ind*3+"<div class=\"publicidad__item publ--1 centrado\"><img src=\"../../publicidad/laarena.png\" alt=\"Publicidad diario La Arena\"></div>\n")
+    f.write(ind*3+"<div class=\"publicidad__item publ--2 centrado\"><img src=\"../../publicidad/unlpam.jpg\" alt=\"Publicidad Universidad de La Pampa\"></div>\n")
+    f.write(ind*3+"<div class=\"publicidad__item publ--3 centrado\"><div>Publicite aqu&iacute!</div></div>\n")
+    f.write(ind*3+"<div class=\"publicidad__item publ--4 centrado\"><img src=\"../../publicidad/atuel.jpg\" alt=\"Propaganda Gobierno de La Pampa\"></div>\n")
     f.write("\t\t</div>\n\n")
 
     f.write("\t\t<footer><a href=\"https://lu4ult.github.io\" target=\"__blank\">Desarrollado por Lautaro Tourn</a></footer>\n")

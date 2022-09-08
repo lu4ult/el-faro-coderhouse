@@ -1,5 +1,4 @@
 @import './_variables';
-// @import './_header';
 
 
 //Extend
@@ -9,7 +8,14 @@
 }
 
 //Mixin
+//Aplicado a las redes sociales en "contacto"
 @mixin redes($_color) {
+
+    @if $responsivelyApp == 1 {
+        width: 75px;
+        height: 75px;
+        aspect-ratio: 1;
+    }
 
     border-radius: 50%;
     border: 1px solid $_color;
@@ -37,6 +43,20 @@
 
 }
 
+//Bucles
+//Aplicado a "publicidades" en el index
+@for $i from 1 through 4 {
+    .publ--#{$i} {
+        @if $i %2 == 0 {
+            border: 3px solid $azul-fuerte;
+        }
+        @else {
+            border: 3px solid $azul-suave;
+        }
+        border-radius: 5px;
+    }
+}
+
 @font-face {
     font-family: 'Myriad';
     src: url(../assets/fonts/myriad.otf);
@@ -50,7 +70,7 @@
     @if $debug == 1 {
         border: 1px solid red;
     }
-    // font-size: calc(1rem + 1.2vw);
+
     font-size: calc(1* $baseSize);
     font-family: 'Myriad', cursive;
     color: $azul-fuerte;
@@ -275,20 +295,19 @@ body {
             //@extend .centrarConFlexCol;
             justify-content: space-evenly;
             align-items: center;
-
             .episodio_imagen {
-                border: 2px solid black;
-                width: 70%;
+                // border: 2px solid black;
+                width: 80%;
                 aspect-ratio: 1;
-
+                @extend .centrarConFlexCol;
+                justify-content: center;
                 img {
                     width: 100%;
-                    object-fit: cover;
+                    object-fit: scale-down;
                 }
             }
 
             .episodio_contenido {
-                width: 100%;
                 max-height: 150px;
                 //display: flex;
                 //flex-direction: column;
@@ -296,6 +315,7 @@ body {
                 border: 1px solid $azul-suave;
                 margin: $espacio*1;
                 padding: $espacio*1;
+                width: 100%;
 
                 .episodio_titulo {
                     background: $azul-fuerte;
@@ -379,6 +399,7 @@ body {
         .social {
             width: 100%;
 
+
             display: flex;
             justify-content: space-evenly;
 
@@ -436,17 +457,33 @@ body {
         justify-content: space-evenly;
         // border: 3px solid pink;
         .publicidad__item {
+            //z-index: 10;
             margin: 8px;
-            // padding: 8px;
-            border: 3px solid black;
+            padding: 2px;
+            //border: 3px solid black;
+            // height: 100px;
+            // width: 100px;
+            // //aspect-ratio: 1;
+            background: $fondo; //Para que tape el fondo a escalar en hover
             img {
-                max-height: 50px;
+                z-index: 10;
+                height: 100%;
+                // max-height: 50px;
                 // height: 100%;
-                //width: 100%;                //Desktop
-                 aspect-ratio: auto;
-                 object-fit: scale-down;
+                width: 100%;                //Desktop
+                //aspect-ratio: auto;
+                object-fit: contain;
             }
         }
+
+        .publ--4 {
+            z-index: 10;    //Para que tape las otras imágenes si al escalar se superponen
+            &:hover {
+                transform: translateX(-50%) translateY(-50%)  scale(2);
+                transition: all 1s;
+            }
+        }
+
     }
 
     footer {
@@ -525,11 +562,11 @@ body {
                 flex-direction: row;
 
                 .episodio_imagen {
-                    width: 30%;
+                    width: 50%;
                 }
 
                 .episodio_contenido {
-                    width: 60%;
+                    width: 50%;
                     max-height: 400px;
                 }
             }
@@ -552,8 +589,8 @@ body {
             .publicidad__item {
 
                 img {
-                    max-height: 200px;
-                    width: 100%;
+                    // max-height: 200px; //mmmm
+                    // width: 100%;
                 }
             }
         }
