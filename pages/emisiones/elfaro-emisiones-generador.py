@@ -80,10 +80,10 @@ with open(".\pages\emisiones\emisiones.html", 'w') as f:
     f.write("\t\t<div class=\"publicidad\">\n")
 
     #  <div class="publicidad__item  publ--1 centrado"><img src="../publicidad/laarena.png" alt="Publicidad diario La Arena"></div>
-    f.write(ind*3+"<div class=\"publicidad__item publ--1 centrado\"><img src=\"../../laarena.png\" alt=\"Publicidad diario La Arena\"></div>\n")
-    f.write(ind*3+"<div class=\"publicidad__item publ--2 centrado\"><img src=\"../../unlpam.jpg\" alt=\"Publicidad Universidad de La Pampa\"></div>\n")
+    f.write(ind*3+"<div class=\"publicidad__item publ--1 centrado\"><img src=\"../../images/laarena.png\" alt=\"Publicidad diario La Arena\"></div>\n")
+    f.write(ind*3+"<div class=\"publicidad__item publ--2 centrado\"><img src=\"../../images/unlpam.jpg\" alt=\"Publicidad Universidad de La Pampa\"></div>\n")
     f.write(ind*3+"<div class=\"publicidad__item publ--3 centrado\"><div>Publicite aqu&iacute!</div></div>\n")
-    f.write(ind*3+"<div class=\"publicidad__item publ--4 centrado\"><img src=\"../../atuel.jpg\" alt=\"Propaganda Gobierno de La Pampa\"></div>\n")
+    f.write(ind*3+"<div class=\"publicidad__item publ--4 centrado\"><img src=\"../../images/atuel.jpg\" alt=\"Propaganda Gobierno de La Pampa\"></div>\n")
     f.write("\t\t</div>\n\n")
 
     f.write("\t\t<footer><a href=\"https://lu4ult.github.io\" target=\"__blank\">Desarrollado por Lautaro Tourn</a></footer>\n")
