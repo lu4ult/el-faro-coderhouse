@@ -1,4 +1,5 @@
 @import './_variables';
+@import './_checkbox';
 
 
 //Extend
@@ -382,12 +383,6 @@ body {
         form {
             width: 50%;
             fieldset {
-                // label, input, textarea {
-                //     // border: 1px solid red;
-                //     width: 100%;
-                //     margin: $espacio/2;         //To-Do: deprecated
-                //     padding: $espacio/2;
-                // }
 
                 label {
                     width: 100%;
@@ -399,8 +394,8 @@ body {
                     @extend label;
                 }
 
-                label {
-                    margin-top: 25px;
+                .espaciado {
+                    margin-top: $espacio*10;
                 }
             }
             input {

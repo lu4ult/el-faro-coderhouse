@@ -1,3 +1,38 @@
+input[type=checkbox] {
+  font-size: 30px;
+  appearance: none;
+  border: 2px solid #0017AC;
+  background: #edeeee;
+  border-radius: 25px;
+  width: 100px;
+  height: 45px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+input[type=checkbox]:checked {
+  background-color: #0C1484;
+}
+
+input[type=checkbox]::after {
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 255, 0.8);
+  transform: scale(0.7);
+  left: 0;
+  transition: 0.2s all ease-in-out;
+}
+
+input[type=checkbox]:checked::after {
+  left: calc(100% - 45px);
+}
+
 .centrarConFlexCol, body main .reproductor-vivo, body main .reproductor-spotify, body main .social .social__yt a, body main .social .social__yt, body main .social .social__fb a, body main .social .social__fb, body main .social .social__wa a, body main .social .social__wa, body main .social .social__ig a, body main .social .social__ig, body main .episodio .episodio_contenido, body main .episodio .episodio_imagen, body main section {
   display: flex;
   flex-direction: column;
@@ -271,8 +306,8 @@ body main form fieldset label, body main form fieldset input, body main form fie
   margin: 2px;
   padding: 2px;
 }
-body main form fieldset label, body main form fieldset input, body main form fieldset textarea {
-  margin-top: 25px;
+body main form fieldset .espaciado {
+  margin-top: 40px;
 }
 body main form input.get {
   width: 100%;
