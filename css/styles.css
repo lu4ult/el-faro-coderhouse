@@ -119,9 +119,6 @@ body header section a span {
   font-size: calc(2 * (0.5rem + 0.8vw));
   color: white;
 }
-body header section div {
-  border: 1px solid orange;
-}
 body header nav {
   height: 100%;
   display: flex;
