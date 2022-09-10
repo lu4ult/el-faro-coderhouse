@@ -36,7 +36,7 @@ with open(".\pages\emisiones\emisiones.html", 'w') as f:
     #f.write("<a href=\"../../index.html\">Volver</a>")
 
     f.write("\n\t\t<header>\n\t\t\t<div class=\"logo-container centrado\">")
-    f.write("\n"+ind*4+"<img src=\"../../images/logo-isotipo-limpio-removebg-preview.png\" alt=\"El Faro Isotipo\">")
+    f.write("\n"+ind*4+"<img src=\"../../images/logo-transparente-parcial.png\" alt=\"El Faro Isotipo\">")
     f.write("\n\t\t\t</div>\n\t\t\t<section>\n\t\t\t\t<a href=\"../../index.html\"><span id=\"titulo\">El </span><span id=\"titulo2\">Faro,</span><span id=\"titulo3\"> un programa de ciencia</span></a>\n\t\t\t</section>")
     f.write("\n\t\t\t<nav>\n"+ind*4+"<ul>")
     f.write("\n"+ind*5+"<li class=\"active\"><a href=\"#\">Emitidos</a></li>")

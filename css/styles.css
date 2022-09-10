@@ -159,6 +159,7 @@ body .centrado {
 body header {
   grid-area: header;
   background: #0017AC;
+  animation: light infinite 15s;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -166,8 +167,10 @@ body header {
   align-items: center;
 }
 body header .logo-container {
+  position: relative;
   height: 100%;
   background: #7399BF;
+  animation: light infinite 15s;
 }
 body header .logo-container img {
   height: 100%;
@@ -297,7 +300,6 @@ body main .equipo {
 body main .equipo div {
   max-width: 200px;
   max-height: 200px;
-  border: 5px solid orange;
   margin: 12px;
   padding: 12px;
 }
@@ -466,6 +468,11 @@ body footer a:active, body footer a:visited {
 @keyframes bounce {
   25% {
     transform: translateY(-5px);
+  }
+}
+@keyframes light {
+  35% {
+    background-color: yellow;
   }
 }
 @media only screen and (min-width: 767px) {
