@@ -55,15 +55,16 @@ with open(".\pages\emisiones\emisiones.html", 'w') as f:
         else:
             f.write(ind*3+"<div data-aos=\"fade-up-left\" class=\"episodio\">\n")
 
-        f.write(ind*4+"<div class=\"episodio_imagen\">\n"+ind*5+"<img src=\"../emisiones/images/" + i + ".webp\" alt=\"Imagen programa "+i+"\">\n"+ind*4+"</div>\n")
+        f.write(ind*4+"<div class=\"episodio_imagen\">\n"+ind*5+"<img src=\"../emisiones/images/" + i + ".jpg\" alt=\"Imagen programa "+i+"\">\n"+ind*4+"</div>\n")
         f.write(ind*4+"<div class=\"episodio_contenido\">\n")
         f.write(ind*5+"<div class=\"episodio_titulo\">Programa " +descripciones[i][0] +" - " + i +"</div>\n")
         f.write(ind*5+"<div class=\"episodio_descripcion\">\n")
 
         try:
-            f.write(ind*6+"<p>"+descripciones[i][1]+"</p>\n")
+            #f.write(ind*6+"<p>"+descripciones[i][1]+"</p>\n")
+            f.write(ind*6+descripciones[i][1]+"\n")
         except:
-            f.write(ind*6+"<p>Sin descripcion en JSON</p>\n")
+            f.write(ind*6+"Sin descripcion en JSON\n")
 
         f.write(ind*5+"</div>\n")
         if count == 0:

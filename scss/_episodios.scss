@@ -1,0 +1,130 @@
+ /************ Emisiones *********/
+ .episodio {
+    border: 3px solid $verde-intermedio;
+    box-shadow: #999 0px 10px 10px 0px;
+    display: flex;
+    flex-direction: row;
+
+    border-radius: 15px;
+    margin: $espacio*2;
+    padding: $espacio*2;
+    display: flex;
+    flex-direction: column;
+    //@extend .centrarConFlexCol;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .episodio_imagen {
+        // border: 2px solid black;
+        //width: 80%;
+        aspect-ratio: 16/9;
+        @extend .centrarConFlexCol;
+        justify-content: center;
+        //border: 2px solid orange;
+        border: 1px solid $azul-suave;
+        margin: $espacio*1;
+        padding: $espacio*1;
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .episodio_contenido {
+        //display: flex;
+        //flex-direction: column;
+        @extend .centrarConFlexCol;
+        border: 1px solid $azul-suave;
+        margin: $espacio*1;
+        padding: $espacio*1;
+        //width: 80%;
+        aspect-ratio: 16/9;
+
+        .episodio_titulo {
+            background: $azul-fuerte;
+            color: $fondo;
+            text-align: center;
+            font-size: calc(1.5* $baseSize);
+        }
+
+        .episodio_descripcion {
+            max-height: 120px;
+            //aspect-ratio: 16/9;
+            overflow: auto;
+            font-size: calc(1.2* $baseSize);
+            // p {
+            //     font-size: calc(1.2* $baseSize);
+            //}
+        }
+        audio {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width: 767px) {
+    .episodio {
+        //width: 100%;
+        //min-height: 600px;
+        //aspect-ratio: 16/9;
+        flex-direction: row;
+
+        //min-height: 300px;
+
+        .episodio_imagen {
+            //height: 150px;
+            //aspect-ratio: 16/9;
+            width: 50%;
+            //min-height: 200px;
+        }
+
+        .episodio_contenido {
+            //height: 150px;
+            //aspect-ratio: 16/9;
+            width: 50%;
+            //min-height: 200px;
+            //height: 100%;
+            //max-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .episodio_titulo {
+                //height: 10%;
+
+            }
+
+            // .episodio_descripcion {
+            //     p {
+            //         font-size: calc(0.9* $baseSize);
+            //         width: 100%;
+            //         max-height: 300px;
+            //         overflow: auto;
+            //     }
+            // }
+
+            .episodio_descripcion {
+                font-size: calc(0.8* $baseSize);
+                //width: 100%;
+                //max-height: 300px;
+
+                //flex-grow: 10;
+                //height: 70%;
+                //width: 100px;
+                //height: 100%;
+                //border: 1px solid red;
+            }
+
+            audio {
+                //height: 10%;
+            }
+        }
+    }
+
+
+    //Los programas impares el script les agrega esta clase.
+    .reverse {
+        flex-direction: row-reverse;
+    }
+
+}

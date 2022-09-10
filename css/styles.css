@@ -33,7 +33,73 @@ input[type=checkbox]:checked::after {
   left: calc(100% - 45px);
 }
 
-.centrarConFlexCol, body main .reproductor-vivo, body main .reproductor-spotify, body main .social .social__yt a, body main .social .social__yt, body main .social .social__fb a, body main .social .social__fb, body main .social .social__wa a, body main .social .social__wa, body main .social .social__ig a, body main .social .social__ig, body main .episodio .episodio_contenido, body main .episodio .episodio_imagen, body main section {
+/************ Emisiones *********/
+.episodio {
+  border: 3px solid #689E23;
+  box-shadow: #999 0px 10px 10px 0px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  margin: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.episodio .episodio_imagen {
+  aspect-ratio: 16/9;
+  justify-content: center;
+  border: 1px solid #7399BF;
+  margin: 4px;
+  padding: 4px;
+}
+.episodio .episodio_imagen img {
+  width: 100%;
+  object-fit: contain;
+}
+.episodio .episodio_contenido {
+  border: 1px solid #7399BF;
+  margin: 4px;
+  padding: 4px;
+  aspect-ratio: 16/9;
+}
+.episodio .episodio_contenido .episodio_titulo {
+  background: #0017AC;
+  color: #edeeee;
+  text-align: center;
+  font-size: calc(1.5 * (0.6rem + 0.9vw));
+}
+.episodio .episodio_contenido .episodio_descripcion {
+  max-height: 120px;
+  overflow: auto;
+  font-size: calc(1.2 * (0.6rem + 0.9vw));
+}
+.episodio .episodio_contenido audio {
+  width: 100%;
+}
+
+@media only screen and (min-width: 767px) {
+  .episodio {
+    flex-direction: row;
+  }
+  .episodio .episodio_imagen {
+    width: 50%;
+  }
+  .episodio .episodio_contenido {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .episodio .episodio_contenido .episodio_descripcion {
+    font-size: calc(0.8 * (0.6rem + 0.9vw));
+  }
+  .reverse {
+    flex-direction: row-reverse;
+  }
+}
+.centrarConFlexCol, body main .reproductor-vivo, body main .reproductor-spotify, body main .social .social__yt a, body main .social .social__yt, body main .social .social__fb a, body main .social .social__fb, body main .social .social__wa a, body main .social .social__wa, body main .social .social__ig a, body main .social .social__ig, body main section, .episodio .episodio_imagen, .episodio .episodio_contenido {
   display: flex;
   flex-direction: column;
 }
@@ -66,7 +132,7 @@ input[type=checkbox]:checked::after {
   margin: 0;
   padding: 0;
   box-sizing: content-box;
-  font-size: calc(1 * (0.5rem + 0.8vw));
+  font-size: calc(1 * (0.6rem + 0.9vw));
   font-family: "Myriad", cursive;
   color: #0017AC;
 }
@@ -116,7 +182,7 @@ body header section a {
   align-self: center;
 }
 body header section a span {
-  font-size: calc(2 * (0.5rem + 0.8vw));
+  font-size: calc(2 * (0.6rem + 0.9vw));
   color: white;
 }
 body header nav {
@@ -164,7 +230,6 @@ body main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /************ Emisiones *********/
   /************ Conductores *********/
   /************ Contacto *********/
   /************ Radio Online *********/
@@ -176,7 +241,7 @@ body main .titulo-principal {
 }
 body main .titulo-principal h1 {
   display: inline-block;
-  font-size: calc(2.5 * (0.5rem + 0.8vw));
+  font-size: calc(2.5 * (0.6rem + 0.9vw));
   color: #0017AC;
 }
 body main .titulo-principal h1::before {
@@ -185,7 +250,7 @@ body main .titulo-principal h1::before {
 }
 body main .titulo-principal h2 {
   display: inline-block;
-  font-size: calc(2 * (0.5rem + 0.8vw));
+  font-size: calc(2 * (0.6rem + 0.9vw));
   color: #7a746c;
 }
 body main section {
@@ -201,7 +266,7 @@ body main section {
 }
 body main section .titulo {
   color: #689E23;
-  font-size: calc(2.5 * (0.5rem + 0.8vw));
+  font-size: calc(2.5 * (0.6rem + 0.9vw));
 }
 body main section .link {
   padding: 8px;
@@ -221,51 +286,6 @@ body main section .card {
 body main section iframe {
   width: 100%;
   min-height: 350px;
-}
-body main .episodio {
-  border: 3px solid #689E23;
-  box-shadow: #999 0px 10px 10px 0px;
-  display: flex;
-  flex-direction: row;
-  border-radius: 15px;
-  margin: 8px;
-  padding: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-body main .episodio .episodio_imagen {
-  width: 80%;
-  aspect-ratio: 1;
-  justify-content: center;
-}
-body main .episodio .episodio_imagen img {
-  width: 100%;
-  object-fit: scale-down;
-}
-body main .episodio .episodio_contenido {
-  max-height: 150px;
-  border: 1px solid #7399BF;
-  margin: 4px;
-  padding: 4px;
-  width: 100%;
-}
-body main .episodio .episodio_contenido .episodio_titulo {
-  background: #0017AC;
-  color: #edeeee;
-  text-align: center;
-  font-size: calc(1.5 * (0.5rem + 0.8vw));
-}
-body main .episodio .episodio_contenido .episodio_descripcion {
-  max-height: 300px;
-  overflow: auto;
-}
-body main .episodio .episodio_contenido .episodio_descripcion p {
-  font-size: calc(1.2 * (0.5rem + 0.8vw));
-}
-body main .episodio .episodio_contenido audio {
-  width: 100%;
 }
 body main .carousel-inner {
   max-width: 480px;
@@ -310,7 +330,7 @@ body main form input.get {
   width: 100%;
   background-color: #295E05;
   color: #edeeee;
-  font-size: calc(1.5 * (0.5rem + 0.8vw));
+  font-size: calc(1.5 * (0.6rem + 0.9vw));
 }
 body main .social {
   width: 100%;
@@ -395,7 +415,7 @@ body main .reproductor-vivo, body main .reproductor-spotify {
   align-items: center;
 }
 body main .reproductor-vivo h6, body main .reproductor-spotify h6 {
-  font-size: calc(3 * (0.5rem + 0.8vw));
+  font-size: calc(3 * (0.6rem + 0.9vw));
 }
 body main .reproductor-vivo video, body main .reproductor-spotify video {
   width: 80%;
@@ -411,6 +431,7 @@ body .publicidad {
   justify-content: space-evenly;
 }
 body .publicidad .publicidad__item {
+  text-align: center;
   margin: 8px;
   padding: 2px;
   background: #edeeee;
@@ -477,21 +498,12 @@ body footer a:active, body footer a:visited {
     min-width: 700px;
     aspect-ratio: 16/9;
   }
-  body main .episodio {
-    flex-direction: row;
-  }
-  body main .episodio .episodio_imagen {
-    width: 50%;
-  }
-  body main .episodio .episodio_contenido {
-    width: 50%;
-    max-height: 400px;
-  }
-  body main .reverse {
-    flex-direction: row-reverse;
-  }
   body .publicidad {
     flex-direction: column;
     justify-content: center;
+  }
+  body .publicidad .publicidad__item img {
+    max-height: 200px;
+    width: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */

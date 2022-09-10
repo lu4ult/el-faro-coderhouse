@@ -1,5 +1,6 @@
 @import './_variables';
 @import './_checkbox';
+@import '_episodios';
 
 
 //Extend
@@ -286,64 +287,71 @@ body {
         }
 
 
-        /************ Emisiones *********/
-        .episodio {
-            border: 3px solid $verde-intermedio;
-            box-shadow: #999 0px 10px 10px 0px;
-            display: flex;
-            flex-direction: row;
+        // /************ Emisiones *********/
+        // .episodio {
+        //     border: 3px solid $verde-intermedio;
+        //     box-shadow: #999 0px 10px 10px 0px;
+        //     display: flex;
+        //     flex-direction: row;
 
-            border-radius: 15px;
-            margin: $espacio*2;
-            padding: $espacio*2;
-            display: flex;
-            flex-direction: column;
-            //@extend .centrarConFlexCol;
-            justify-content: space-evenly;
-            align-items: center;
-            .episodio_imagen {
-                // border: 2px solid black;
-                width: 80%;
-                aspect-ratio: 1;
-                @extend .centrarConFlexCol;
-                justify-content: center;
-                img {
-                    width: 100%;
-                    object-fit: scale-down;
-                }
-            }
+        //     border-radius: 15px;
+        //     margin: $espacio*2;
+        //     padding: $espacio*2;
+        //     display: flex;
+        //     flex-direction: column;
+        //     //@extend .centrarConFlexCol;
+        //     justify-content: space-evenly;
+        //     align-items: center;
 
-            .episodio_contenido {
-                max-height: 150px;
-                //display: flex;
-                //flex-direction: column;
-                @extend .centrarConFlexCol;
-                border: 1px solid $azul-suave;
-                margin: $espacio*1;
-                padding: $espacio*1;
-                width: 100%;
+        //     .episodio_imagen {
+        //         // border: 2px solid black;
+        //         width: 80%;
+        //         aspect-ratio: 16/9;
+        //         @extend .centrarConFlexCol;
+        //         justify-content: center;
+        //         //border: 2px solid orange;
+        //         border: 1px solid $azul-suave;
+        //         margin: $espacio*1;
+        //         padding: $espacio*1;
+        //         img {
+        //             width: 100%;
+        //             object-fit: scale-down;
+        //         }
+        //     }
 
-                .episodio_titulo {
-                    background: $azul-fuerte;
-                    color: $fondo;
-                    text-align: center;
-                    font-size: calc(1.5* $baseSize);
-                }
+        //     .episodio_contenido {
+        //         //display: flex;
+        //         //flex-direction: column;
+        //         @extend .centrarConFlexCol;
+        //         border: 1px solid $azul-suave;
+        //         margin: $espacio*1;
+        //         padding: $espacio*1;
+        //         width: 80%;
+        //         aspect-ratio: 16/9;
 
-                .episodio_descripcion {
-                    max-height: 300px;
-                    overflow: auto;
-                    p {
-                        font-size: calc(1.2* $baseSize);
-                    }
-                }
-                audio {
-                    width: 100%;
-                }
-            }
-        }
+        //         .episodio_titulo {
+        //             background: $azul-fuerte;
+        //             color: $fondo;
+        //             text-align: center;
+        //             font-size: calc(1.5* $baseSize);
+        //         }
+
+        //         .episodio_descripcion {
+        //             max-height: 120px;
+        //             //aspect-ratio: 16/9;
+        //             overflow: auto;
+        //             p {
+        //                 font-size: calc(1.2* $baseSize);
+        //             }
+        //         }
+        //         audio {
+        //             width: 100%;
+        //         }
+        //     }
+        // }
+
+
         /************ Conductores *********/
-
         .carousel-inner {
             max-width: 480px;
         }
@@ -464,6 +472,7 @@ body {
         justify-content: space-evenly;
         // border: 3px solid pink;
         .publicidad__item {
+            text-align: center;
             //z-index: 10;
             margin: 8px;
             padding: 2px;
@@ -477,7 +486,7 @@ body {
                 height: 100%;
                 // max-height: 50px;
                 // height: 100%;
-                width: 100%;                //Desktop
+                width: 100%;
                 //aspect-ratio: auto;
                 object-fit: contain;
             }
@@ -523,6 +532,25 @@ body {
     }
 }
 
+
+
+//Dispositivos de menos de 280px de ancho podrían romperse totalmente
+// @media only screen and (max-width: 300px) {
+//     // body {
+//     //     grid-template-areas:
+//     //     "header header header"
+//     //     "main main main"
+//     //     "main main main"
+//     //     "main main main"
+//     //     "footer footer footer";
+//     // }
+//     @if $debug == 1 {
+//         body {
+//             background: red;
+//         }
+//     }
+// }
+
 @media only screen and (min-width: 767px) {
     body {
         grid-template-rows: 10vh repeat(3, auto) 7vh;
@@ -565,24 +593,42 @@ body {
                 }
             }
 
-            .episodio {
-                flex-direction: row;
+            // .episodio {
+            //     width: 100%;
+            //     //aspect-ratio: 16/9;
+            //     flex-direction: row;
 
-                .episodio_imagen {
-                    width: 50%;
-                }
+            //     //min-height: 300px;
 
-                .episodio_contenido {
-                    width: 50%;
-                    max-height: 400px;
-                }
-            }
+            //     .episodio_imagen {
+            //         //height: 150px;
+            //         //aspect-ratio: 16/9;
+            //         width: 50%;
+            //         //max-height: 300px;
+            //     }
+
+            //     .episodio_contenido {
+            //         //height: 150px;
+            //         //aspect-ratio: 16/9;
+            //         width: 50%;
+            //         //max-height: 200px;
+
+            //         .episodio_descripcion {
+            //             p {
+            //                 font-size: calc(0.9* $baseSize);
+            //                 width: 100%;
+            //                 max-height: 300px;
+            //                 overflow: auto;
+            //             }
+            //         }
+            //     }
+            // }
 
 
             //Los programas impares el script les agrega esta clase.
-            .reverse {
-                flex-direction: row-reverse;
-            }
+            // .reverse {
+            //     flex-direction: row-reverse;
+            // }
         }
 
         footer {
@@ -596,10 +642,24 @@ body {
             .publicidad__item {
 
                 img {
-                    // max-height: 200px; //mmmm
-                    // width: 100%;
+                    max-height: 200px; //mmmm
+                    width: 100%;
                 }
             }
         }
     }
 }
+
+// @media only screen and (min-width: 1300px) {
+//     .publicidad
+//     body {
+//         grid-template-rows: 10vh repeat(3, auto) 10vh;
+//         grid-template-areas:
+//         "header header header"
+//         "publicidad publicidad publicidad"
+//         "main main main"
+//         "main main main"
+//         "footer footer footer";
+//     }
+// }
+
