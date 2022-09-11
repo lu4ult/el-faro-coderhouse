@@ -89,7 +89,7 @@ $mapaMiembros: (
 
     @if $debug-level == 3 {
         outline: 1px solid red !important;
-        background: rgba(250,10,50, 0.1);
+        background: rgba(250,10,50, 0.15);
     }
 
     font-size: calc(1* $baseSize);
@@ -144,7 +144,7 @@ body {
         align-items: center;
 
         .logo-container {
-            position: relative;
+            //position: relative;
             height: 100%;
             background: $azul-suave;
             animation: light infinite $duracion;
@@ -202,6 +202,8 @@ body {
         nav {
             height: 100%;
             display: flex;
+            align-items: center;
+            justify-content: center;
             ul {
                 list-style-type: none;
                 height: 100%;
