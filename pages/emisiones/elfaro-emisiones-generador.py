@@ -27,6 +27,8 @@ with open(".\pages\emisiones\emisiones.html", 'w') as f:
     f.write("<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<meta charset=""utf-8"">\n\t\t<title>El Faro - Faros del pasado</title>\n")
     f.write("\t\t<link rel=\"icon\" type=\"image/x-icon\" href=\"../../images/favicon.png\">\n")
 
+    f.write("\n\t\t<!-- Bootstrap -->\n\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx\" crossorigin=\"anonymous\">")
+    f.write("\n\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx\" crossorigin=\"anonymous\">")
     f.write("\n\t\t<!-- AOS -->\n\t\t<link href=\"https://unpkg.com/aos@2.3.1/dist/aos.css\" rel=\"stylesheet\">")
     f.write("\n\t\t<script src=\"https://unpkg.com/aos@2.3.1/dist/aos.js\"></script>")
     f.write("\n\t\t<link rel=\"stylesheet\" href=\"../../css/styles.css\">\n\n\t\t<link rel=\"icon\" type=\"image/x-icon\" href=\"../favicon.png\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">")
