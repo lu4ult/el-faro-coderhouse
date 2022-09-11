@@ -1,3 +1,5 @@
+/***********************************/
+/***********************************/
 input[type=checkbox] {
   font-size: 30px;
   appearance: none;
@@ -132,6 +134,8 @@ input[type=checkbox]:checked::after {
   margin: 0;
   padding: 0;
   box-sizing: content-box;
+  outline: 1px solid red !important;
+  background: rgba(250, 10, 50, 0.1);
   font-size: calc(1 * (0.6rem + 0.9vw));
   font-family: "Myriad", cursive;
   color: #0017AC;
@@ -330,9 +334,16 @@ body main form fieldset .espaciado {
 }
 body main form input.get {
   width: 100%;
+  margin-bottom: 20px;
+  border-radius: 15px;
   background-color: #295E05;
   color: #edeeee;
   font-size: calc(1.5 * (0.6rem + 0.9vw));
+  box-shadow: 5px 10px 0 #50AB11;
+}
+body main form input.get:active {
+  box-shadow: none;
+  transform: translate(5px, 10px);
 }
 body main .social {
   width: 100%;

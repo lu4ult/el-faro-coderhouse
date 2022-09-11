@@ -30,7 +30,7 @@
     }
 
     a {
-        @if $debug == 1 {
+        @if $debug-level == 1 {
             border: 2px solid orange;
         }
 
@@ -79,8 +79,17 @@ $mapaMiembros: (
     padding: 0;
     box-sizing: content-box;
 
-    @if $debug == 1 {
-        border: 1px solid red;
+    @if $debug-level == 1 {
+        outline: 1px solid red;
+    }
+
+    @if $debug-level == 2 {
+        outline: 1px solid red !important;
+    }
+
+    @if $debug-level == 3 {
+        outline: 1px solid red !important;
+        background: rgba(250,10,50, 0.1);
     }
 
     font-size: calc(1* $baseSize);
@@ -435,9 +444,19 @@ body {
             input {
                 &.get {                 //Botón enviar
                     width: 100%;
+                    margin-bottom: 20px;
+                    border-radius: 15px;
                     background-color: $verde-fuerte;
                     color: $fondo;
                     font-size: calc(1.5* $baseSize);
+
+                    box-shadow: 5px 10px 0 $verde-suave;
+
+                    //Referencia: https://vm.tiktok.com/ZMNEqN4tG/
+                    &:active {
+                        box-shadow: none;
+                        transform: translate(5px, 10px);
+                    }
                 }
             }
         }

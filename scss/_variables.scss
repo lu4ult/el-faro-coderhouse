@@ -1,14 +1,15 @@
 
-//
-$debug:0;               //Agrega borde rojo para ver las cajas
-$texto-azul:1;          //Color de los textos de la navegación
-$responsivelyApp:0;     //En responsively si no le damos un width y un height a las <img> se rompe todo, cosa que no sucede en la realidad.
+/***********************************/
+$debug-level:3;             //1: Agrega borde rojo (outline, no border para que no ocupe espacio) para ver las cajas
+                            //2: idem con !important
+                            //3: idem + background
 
+$texto-azul:1;              //Color de los textos de la navegación
+$responsivelyApp:0;         //En responsively si no le damos un width y un height a las <img> se rompe todo, cosa que no sucede en la realidad.
+/***********************************/
 
-$duracion: 15s;
+$duracion: 15s;             //Duración de la animación del header
 
-
-// $ancho-boton: 100px;
 $azul-transparente: rgba(38,101,214,.3);
 $azul: #2665d6;
 $azul-oscuro: #0C1484;
