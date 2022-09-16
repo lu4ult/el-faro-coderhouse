@@ -11,11 +11,16 @@ Herramientas utilizadas:
 
 
 
-Ver Online:
-```sh
-https://lu4ult.github.io/el-faro-coderhouse/index.html
-```
+<strong>Ver Online:</strong>
 
+<a href="https://lu4ult.github.io/el-faro-coderhouse/index.html" target="_blank">https://lu4ult.github.io/el-faro-coderhouse/index.html</a>
+
+
+
+Alternativa:
+```sh
+https://dainty-piroshki-5412ab.netlify.app/
+```
 
 Repo:
 ```sh
