@@ -11,15 +11,15 @@ Herramientas utilizadas:
 
 
 
-<strong>Ver Online:</strong>
+<h1>Ver Online:</h1>
 
-<a href="https://lu4ult.github.io/el-faro-coderhouse/index.html" target="_blank">https://lu4ult.github.io/el-faro-coderhouse/index.html</a>
+<strong><a href="https://dainty-piroshki-5412ab.netlify.app/" target="_blank">https://dainty-piroshki-5412ab.netlify.app/</a></strong>
 
 
 
-Alternativa:
+Alternativa en Github Pages:
 ```sh
-https://dainty-piroshki-5412ab.netlify.app/
+https://lu4ult.github.io/el-faro-coderhouse/index.html
 ```
 
 Repo:
