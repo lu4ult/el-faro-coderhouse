@@ -161,34 +161,6 @@ body {
             }
         }
 
-        // .logo-container {
-        //     position: relative;
-        //     height: 100%;
-        //     background: $azul-suave;
-        //     animation: light infinite 5s;
-
-        //     img {
-        //         height: 100%;
-        //         width: 100%;                //Navegador Real
-        //         //aspect-ratio: 1;            //Responsively App
-
-        //         max-width: 100px;
-        //         object-fit: cover;
-        //         //z-index: 20;
-        //     }
-
-        //     .logo-container__fondo {
-        //         position: absolute;
-        //         left: 0;
-        //         z-index: 0;
-
-        //         img {
-        //             //z-index: 10;
-        //         }
-        //     }
-
-        // }
-
         section {
             display: flex;
             a {
@@ -329,71 +301,6 @@ body {
             }
         }
 
-
-        // /************ Emisiones *********/
-        // .episodio {
-        //     border: 3px solid $verde-intermedio;
-        //     box-shadow: #999 0px 10px 10px 0px;
-        //     display: flex;
-        //     flex-direction: row;
-
-        //     border-radius: 15px;
-        //     margin: $espacio*2;
-        //     padding: $espacio*2;
-        //     display: flex;
-        //     flex-direction: column;
-        //     //@extend .centrarConFlexCol;
-        //     justify-content: space-evenly;
-        //     align-items: center;
-
-        //     .episodio_imagen {
-        //         // border: 2px solid black;
-        //         width: 80%;
-        //         aspect-ratio: 16/9;
-        //         @extend .centrarConFlexCol;
-        //         justify-content: center;
-        //         //border: 2px solid orange;
-        //         border: 1px solid $azul-suave;
-        //         margin: $espacio*1;
-        //         padding: $espacio*1;
-        //         img {
-        //             width: 100%;
-        //             object-fit: scale-down;
-        //         }
-        //     }
-
-        //     .episodio_contenido {
-        //         //display: flex;
-        //         //flex-direction: column;
-        //         @extend .centrarConFlexCol;
-        //         border: 1px solid $azul-suave;
-        //         margin: $espacio*1;
-        //         padding: $espacio*1;
-        //         width: 80%;
-        //         aspect-ratio: 16/9;
-
-        //         .episodio_titulo {
-        //             background: $azul-fuerte;
-        //             color: $fondo;
-        //             text-align: center;
-        //             font-size: calc(1.5* $baseSize);
-        //         }
-
-        //         .episodio_descripcion {
-        //             max-height: 120px;
-        //             //aspect-ratio: 16/9;
-        //             overflow: auto;
-        //             p {
-        //                 font-size: calc(1.2* $baseSize);
-        //             }
-        //         }
-        //         audio {
-        //             width: 100%;
-        //         }
-        //     }
-        // }
-
-
         /************ Conductores *********/
         .carousel-inner {
             max-width: 480px;
@@ -432,8 +339,8 @@ body {
 
                 label {
                     width: 100%;
-                    margin: $espacio/2;         //To-Do: deprecated
-                    padding: $espacio/2;
+                    margin: calc(0.5*$espacio);         //To-Do: deprecated
+                    padding: calc(0.5*$espacio);
                 }
 
                 input, textarea {
@@ -491,6 +398,22 @@ body {
                 @include redes(#ff0000)
             }
         }
+
+        // .wa-flotante {
+        //    border: 3px solid pink;
+        //    position: sticky;
+        // //    left: calc(100vw - 10px);
+        //     right: 100px;
+
+        //     a {
+
+        //         img {
+        //             width: 75px;
+        //             height: 75px;
+
+        //         }
+        //     }
+        // }
 
         /************ Radio Online *********/
 
@@ -557,7 +480,7 @@ body {
 
     footer {
         // position: sticky;
-        margin-top: 2rem;
+        margin-top: 6rem;
         padding: 1rem;
         grid-area: footer;
         display: flex;
@@ -655,58 +578,16 @@ body {
                     aspect-ratio: 16/9;
                 }
             }
-
-            // .episodio {
-            //     width: 100%;
-            //     //aspect-ratio: 16/9;
-            //     flex-direction: row;
-
-            //     //min-height: 300px;
-
-            //     .episodio_imagen {
-            //         //height: 150px;
-            //         //aspect-ratio: 16/9;
-            //         width: 50%;
-            //         //max-height: 300px;
-            //     }
-
-            //     .episodio_contenido {
-            //         //height: 150px;
-            //         //aspect-ratio: 16/9;
-            //         width: 50%;
-            //         //max-height: 200px;
-
-            //         .episodio_descripcion {
-            //             p {
-            //                 font-size: calc(0.9* $baseSize);
-            //                 width: 100%;
-            //                 max-height: 300px;
-            //                 overflow: auto;
-            //             }
-            //         }
-            //     }
-            // }
-
-
-            //Los programas impares el script les agrega esta clase.
-            // .reverse {
-            //     flex-direction: row-reverse;
-            // }
-        }
-
-        footer {
-
         }
 
         .publicidad {
             max-height: none;
             flex-direction: column;
-            //@extend .centrarConFlexCol;
             justify-content: center;
+            // position: fixed;
+            //  top: 0;
             .publicidad__item {
-
                 img {
-                    max-height: 200px; //mmmm
                     width: 100%;
                 }
             }

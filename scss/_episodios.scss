@@ -14,9 +14,14 @@
     justify-content: space-evenly;
     align-items: center;
 
+    &:hover {
+        transition: all .3s;
+        background: $azul-transparente;
+    }
+
     .episodio_imagen {
         // border: 2px solid black;
-        //width: 80%;
+        width: 100%;
         aspect-ratio: 16/9;
         @extend .centrarConFlexCol;
         justify-content: center;
@@ -26,7 +31,8 @@
         padding: $espacio*1;
         img {
             width: 100%;
-            object-fit: contain;
+            height: 100%;
+            object-fit: scale-down;
         }
     }
 
@@ -37,7 +43,7 @@
         border: 1px solid $azul-suave;
         margin: $espacio*1;
         padding: $espacio*1;
-        //width: 80%;
+        width: 100%;
         aspect-ratio: 16/9;
 
         .episodio_titulo {
@@ -64,22 +70,15 @@
 
 @media only screen and (min-width: 767px) {
     .episodio {
-        //width: 100%;
-        //min-height: 600px;
-        //aspect-ratio: 16/9;
         flex-direction: row;
-
-        //min-height: 300px;
+        height: 200px;
 
         .episodio_imagen {
-            //height: 150px;
-            //aspect-ratio: 16/9;
-            width: 50%;
-            //min-height: 200px;
+            height: 100%;
         }
 
         .episodio_contenido {
-            //height: 150px;
+            height: 100%;
             //aspect-ratio: 16/9;
             width: 50%;
             //min-height: 200px;

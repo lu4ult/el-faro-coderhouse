@@ -47,10 +47,18 @@ with open(".\pages\emisiones\emisiones.html", 'w') as f:
     f.write("\n"+ind*5+"<li><a href=\"../../pages/radio-online.html\">Radio Online</a></li>")
     f.write("\n"+ind*4+"</ul>\n\t\t\t</nav>\n\t\t</header>\n\n\t\t<main>\n")
 
+    f.write(r"""
+            <div class="titulo-principal">
+                <h1>Faro,</h1>
+                <h2>Un programa de ciencia</h2>
+                <h3>Faros del pasado</h3>
+            </div>
+            """)
+
     count = 0
-    for i in episodios:
-        print(descripciones[i][0])
-        print(descripciones[i][1])
+    # for i in episodios:
+    #     print(descripciones[i][0])
+    #     print(descripciones[i][1])
     for i in episodios:
         if count%2 == 1:
             f.write(ind*3+"<div data-aos=\"fade-up-right\" class=\"episodio reverse\">\n")
