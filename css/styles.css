@@ -85,7 +85,10 @@ input[type=checkbox]:checked::after {
   font-size: calc(1.2 * (0.6rem + 0.9vw));
 }
 .episodio .episodio_contenido audio {
+  margin-top: 1rem;
   width: 100%;
+  height: 40px;
+  outline: 2px solid #aaa;
 }
 
 @media only screen and (min-width: 767px) {
@@ -105,6 +108,9 @@ input[type=checkbox]:checked::after {
   }
   .episodio .episodio_contenido .episodio_descripcion {
     font-size: calc(0.8 * (0.6rem + 0.9vw));
+  }
+  .episodio .episodio_contenido audio {
+    height: 100px;
   }
   .reverse {
     flex-direction: row-reverse;
