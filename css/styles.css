@@ -307,30 +307,6 @@ body main section iframe {
 body main .carousel-inner {
   max-width: 480px;
 }
-body main .equipo {
-  border: 2px solid black;
-  display: flex;
-}
-body main .equipo div {
-  max-width: 200px;
-  max-height: 200px;
-  margin: 12px;
-  padding: 12px;
-}
-body main .equipo div img {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-}
-body main .equipo .equipo__miembro1 {
-  border-color: #0017AC;
-}
-body main .equipo .equipo__miembro2 {
-  border-color: #0C1484;
-}
-body main .equipo .equipo__miembro3 {
-  border-color: #7399BF;
-}
 body main form {
   width: 50%;
 }

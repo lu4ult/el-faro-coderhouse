@@ -288,30 +288,7 @@ body {
 
         /************ Conductores *********/
         .carousel-inner {
-            max-width: 480px;
-        }
-
-        .equipo {
-            border: 2px solid black;
-            display: flex;
-
-            div {
-                max-width: 200px;
-                max-height: 200px;
-                margin: $espacio*3;
-                padding: $espacio*3;
-                img {
-                    width: 100%;
-                    aspect-ratio: 1;
-                    object-fit: cover;
-                }
-            }
-
-            @each $conductor, $color in $mapaMiembros {
-                .equipo__#{$conductor} {
-                    border-color: $color;
-                }
-            }
+            max-width: 480px;           //Igual al tamaño de la imágen, sino se rompe en Desktop
         }
 
         /************ Contacto *********/
