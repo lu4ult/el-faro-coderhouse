@@ -55,7 +55,6 @@ input[type=checkbox]:checked::after {
 }
 .episodio .episodio_imagen {
   width: 100%;
-  aspect-ratio: 16/9;
   justify-content: center;
   border: 1px solid #7399BF;
   margin: 4px;

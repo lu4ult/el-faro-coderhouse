@@ -70,10 +70,10 @@ with open(".\pages\emisiones\emisiones.html", 'w') as f:
 
     for i in episodios:
         if count%2 == 1:
-            f.write(ind*3+"<div data-aos=\"flip-right\" data-aos-duration=\"1000\" class=\"episodio reverse\">\n")
+            f.write(ind*3+"<div data-aos=\"flip-right\" data-aos-duration=\"600\" class=\"episodio reverse\">\n")
             #f.write(ind*3+"<div class=\"episodio reverse\">\n")
         else:
-            f.write(ind*3+"<div data-aos=\"flip-left\" data-aos-duration=\"1000\" class=\"episodio\">\n")
+            f.write(ind*3+"<div data-aos=\"flip-left\" data-aos-duration=\"600\" class=\"episodio\">\n")
             #f.write(ind*3+"<div class=\"episodio\">\n")
 
         f.write(ind*4+"<div class=\"episodio_imagen\">\n"+ind*5+"<img src=\"../emisiones/images/" + i + ".jpg\" alt=\"Imagen programa "+i+"\">\n"+ind*4+"</div>\n")
