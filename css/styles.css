@@ -96,10 +96,13 @@ input[type=checkbox]:checked::after {
   }
   .episodio .episodio_imagen {
     height: 100%;
+    width: 50%;
+  }
+  .episodio .episodio_imagen img {
+    object-fit: cover;
   }
   .episodio .episodio_contenido {
     height: 100%;
-    aspect-ratio: 16/9;
     width: 50%;
     display: flex;
     flex-direction: column;
