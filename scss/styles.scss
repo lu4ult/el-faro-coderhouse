@@ -391,10 +391,16 @@ body {
                 width: 80%;
             }
 
-            a img {
-                max-width: 100px;
-                aspect-ratio: 1;
-                object-fit: scale-down;
+            a {
+                text-align: center;
+                img {
+                    //max-width: 50px;
+                    // min-width: 50px;
+                    // max-width: 100px;
+                    width: 15%;
+                    aspect-ratio: 1;
+                    //object-fit: scale-down;
+                }
             }
         }
     }

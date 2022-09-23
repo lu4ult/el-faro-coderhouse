@@ -146,6 +146,8 @@ input[type=checkbox]:checked::after {
   margin: 0;
   padding: 0;
   box-sizing: content-box;
+  outline: 1px solid red !important;
+  background: rgba(250, 10, 50, 0.15);
   font-size: calc(1 * (0.6rem + 0.9vw));
   font-family: "Myriad", cursive;
   color: #0017AC;
@@ -416,10 +418,12 @@ body main .reproductor-vivo h6, body main .reproductor-spotify h6 {
 body main .reproductor-vivo video, body main .reproductor-spotify video {
   width: 80%;
 }
+body main .reproductor-vivo a, body main .reproductor-spotify a {
+  text-align: center;
+}
 body main .reproductor-vivo a img, body main .reproductor-spotify a img {
-  max-width: 100px;
+  width: 15%;
   aspect-ratio: 1;
-  object-fit: scale-down;
 }
 body .publicidad {
   grid-area: publicidad;
