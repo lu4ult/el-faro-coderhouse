@@ -24,8 +24,19 @@ with open(".\pages\emisiones\descripciones.json") as json_file:
 #generamos el archivo html en función de la lista de episodios
 
 with open(".\pages\emisiones\emisiones.html", 'w') as f:
-    f.write("<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<meta charset=""utf-8"">\n\t\t<title>El Faro - Faros del pasado</title>\n")
-    f.write("\t\t<link rel=\"icon\" type=\"image/x-icon\" href=\"../../images/favicon.png\">\n")
+
+    f.write(r"""
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel=icon type="image/x-icon" href="../../images/favicon.png">
+        <title>El Faro - Faros del pasado</title>
+        <meta name="title" content="Faros del pasado">
+        <meta name="description" content="Faros del pasado: aqu&iacute puede escuchar emisiones del programa.">
+        <meta name="keywords" content="faros del pasado, ciencia,radio, divulgaci&oacuten cient&iacutefica, faro, el faro, la pampa, la arena, radionoticias">
+        <meta name="author" content="Lautaro Tourn: lu4ult@gmail.com">
+        """)
 
     f.write("\n\t\t<!-- Bootstrap -->\n\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx\" crossorigin=\"anonymous\">")
     f.write("\n\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx\" crossorigin=\"anonymous\">")
