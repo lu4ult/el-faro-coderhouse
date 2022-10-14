@@ -125,7 +125,7 @@ with open(".\pages\emisiones\wa-link.html", 'w') as f:
     #print(descripciones[episodios[0]][1])
     texto = "Ya est%C3%A1 disponible el *programa "+descripciones[episodios[0]][0]+" del "+episodios[0]+" de El Faro!*%0a%0a%0a"
     texto += descripciones[episodios[0]][1]
-    texto += "%0a%0a%0aPodes esucharla en el siguiente link:%0ahttps://lu4ult.github.io/el-faro-coderhouse/pages/emisiones/emisiones.html%0a%0a"
+    texto += "%0a%0a%0aPodes esucharla en el siguiente link:%0ahttps://dainty-piroshki-5412ab.netlify.app/pages/emisiones/emisiones.html%0a%0a"
     texto += "O en spotify:%0ahttps://open.spotify.com/show/26ZvU92WzcChhUnhaSxzPw"
 
     f.write("<a target=\"__blank\" href=\"https://wa.me/542954543687?text="+texto+"\">Link Fernando</a><br>")
