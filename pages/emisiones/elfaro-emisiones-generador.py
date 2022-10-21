@@ -36,7 +36,7 @@ with open(".\pages\emisiones\emisiones.html", 'w') as f:
         <meta name="description" content="Faros del pasado: aqu&iacute puede escuchar emisiones del programa.">
         <meta name="keywords" content="faros del pasado, ciencia,radio, divulgaci&oacuten cient&iacutefica, faro, el faro, la pampa, la arena, radionoticias">
         <meta name="author" content="Lautaro Tourn: lu4ult@gmail.com">
-        """)
+""")
 
     f.write("\n\t\t<!-- Bootstrap -->\n\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx\" crossorigin=\"anonymous\">")
     f.write("\n\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx\" crossorigin=\"anonymous\">")
