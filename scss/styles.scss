@@ -329,6 +329,9 @@ body {
                     }
                 }
             }
+            &:focus-within {
+                background: $azul-suave;
+            }
         }
 
         .social {

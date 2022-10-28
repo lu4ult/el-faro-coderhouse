@@ -330,6 +330,9 @@ body main form input.get:active {
   box-shadow: none;
   transform: translate(5px, 10px);
 }
+body main form:focus-within {
+  background: #7399BF;
+}
 body main .social {
   width: 100%;
   display: flex;
